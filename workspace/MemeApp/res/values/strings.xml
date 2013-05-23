@@ -3,6 +3,7 @@
 
     <string name="app_name">MemeApp</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="take">Take a Photo</string>
+    <string name="grab">Grab a Photo</string>
 
 </resources>
