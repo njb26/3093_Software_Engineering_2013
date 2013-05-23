@@ -728,3 +728,15 @@ java.lang.NumberFormatException: Color value '@drawable/gallery_image' must star
 
 !ENTRY com.android.ide.eclipse.adt 2 0 2013-05-23 17:28:26.750
 !MESSAGE activity_selection.xml: "center_left" in attribute "layout_gravity" is not a valid value
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-05-23 17:56:28.044
+!MESSAGE Warning: Ignoring name conflict in resource file for name action_settings
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-05-23 17:56:28.070
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-05-23 17:56:28.073
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_vertical_margin
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-05-23 17:56:28.089
+!MESSAGE Warning: Ignoring name conflict in resource file for name activity_horizontal_margin

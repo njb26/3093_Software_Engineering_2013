@@ -26,6 +26,10 @@
             android:name="com.uc.memeapp.SelectionActivity"
             android:label="@string/title_activity_selection" >
         </activity>
+        <activity
+            android:name="com.uc.memeapp.CameraActivity"
+            android:label="@string/title_activity_camera" >
+        </activity>
     </application>
 
 </manifest>
