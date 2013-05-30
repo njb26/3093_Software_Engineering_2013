@@ -42,7 +42,6 @@
         android:layout_weight="1"     	
         android:text="@string/stock" />
    	</LinearLayout>
-   	
    		
       <TextView
         android:id="@+id/tv"
