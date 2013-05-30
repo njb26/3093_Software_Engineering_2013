@@ -1,15 +1,19 @@
 In this release:
 
+
+
 REQUIREMENTS DOC:
 -Our suggestion was to create a new name for the app, we could not
 find one that we liked more than the current "Meme My Friends"
 and as this is relatively low-priority, did not update, and will
 continue to think on this
 
+
 SPECIFICATIONS DOC:
 -Added in the first version of the use-case diagram
 -Added first version of system metaphor
 -Added in user story for this release
+
 
 
 APPLICATION:
@@ -29,3 +33,25 @@ created, with perhaps some stock photos to choose from.
 
 If we have time: have the "camera" activity working, to take a photo
 	-nice-to-have: saving the photo to the system.
+
+
+
+Comments:
+
+Requirements document:
+1. Explore features of other similar app and update "replacement of legacy systems" as discussed 
+2. Continue to think about a App name and a s/m metaphor (in the lines of "photo booth", "caricature").Something creative! We don't need it right away but keep thinking, and update it whenever you have one.
+3. Include an Appendix with information about API and other resources that you collect (specifically, facebook API, API for camera & stock photos)
+4. Breakdown the statement of functionality into "specific" features/requirments
+5. Define/differentiate terms: stock photos, gallery etc under "terminology"
+
+Specification document:
+1. In the use-case diagram, gallery could be another possible actor. Verify syntax (correct arrows, <include>, <extend> as neccessary) to associate different use cases. Include a system boundary.
+2. Cut down the user story to a single sentence.
+
+Next steps (Implementation):
+1. Start working on creating a user interface for various activities
+2. Explore ways to select photos from the stock or gallery
+3. Research on Facebook/twitter API (find out how other apps do it)
+
+Good work on the use-case diagram. You are the only team that has a detailed use case diagram. Meet frequently, brainstorm and code as a TEAM!
