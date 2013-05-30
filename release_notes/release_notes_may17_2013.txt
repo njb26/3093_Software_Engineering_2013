@@ -1,0 +1,4 @@
+release_notes_may12_2013
+
+In this release, we have set up our GitHub and added in the first version 
+of our Requirements Document.
