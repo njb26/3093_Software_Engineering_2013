@@ -1,0 +1,31 @@
+In this release:
+
+REQUIREMENTS DOC:
+-Our suggestion was to create a new name for the app, we could not
+find one that we liked more than the current "Meme My Friends"
+and as this is relatively low-priority, did not update, and will
+continue to think on this
+
+SPECIFICATIONS DOC:
+-Added in the first version of the use-case diagram
+-Added first version of system metaphor
+-Added in user story for this release
+
+
+APPLICATION:
+-Created two basic activities, the first one and the one
+that you use if you choose to load a photograph rather than
+take a photograph
+-Decided on basic layout, font, buttons, and so on to understand
+what  we would need to continue and have a uniform layout/app'
+
+
+TODO:
+For the next release:
+-We want to have the activity to select stock photos
+created, with perhaps some stock photos to choose from.
+-The activity to select photos from the phone's gallery created
+	-actually selecting photo is a nice-to-have
+
+If we have time: have the "camera" activity working, to take a photo
+	-nice-to-have: saving the photo to the system.
