@@ -2,7 +2,11 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_iAtqkcuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_iAtqksuoEeKJWvU_Kwp5YQ" bindingContexts="_iAuRpMuoEeKJWvU_Kwp5YQ">
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <children xsi:type="basic:TrimmedWindow" xmi:id="_iAtqksuoEeKJWvU_Kwp5YQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_jZgCcMuoEeKJWvU_Kwp5YQ" x="100" y="100" width="1024" height="768">
+=======
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_iAtqksuoEeKJWvU_Kwp5YQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_jZgCcMuoEeKJWvU_Kwp5YQ" x="800" y="0" width="800" height="860">
+>>>>>>> origin/Curtis_Branch
 =======
   <children xsi:type="basic:TrimmedWindow" xmi:id="_iAtqksuoEeKJWvU_Kwp5YQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_jZgCcMuoEeKJWvU_Kwp5YQ" x="800" y="0" width="800" height="860">
 >>>>>>> origin/Curtis_Branch
@@ -76,8 +80,13 @@
           <tags>persp.viewSC:org.eclipse.mylyn.tasks.ui.views.tasks</tags>
           <tags>persp.newWizSC:org.eclipse.mylyn.tasks.ui.wizards.new.repository.task</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <children xsi:type="basic:PartSashContainer" xmi:id="_j0JXEcuoEeKJWvU_Kwp5YQ" selectedElement="_j0JXEsuoEeKJWvU_Kwp5YQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_j0JXEsuoEeKJWvU_Kwp5YQ" containerData="2500" selectedElement="_j0JXE8uoEeKJWvU_Kwp5YQ">
+=======
+          <children xsi:type="basic:PartSashContainer" xmi:id="_j0JXEcuoEeKJWvU_Kwp5YQ" selectedElement="_j0J-JcuoEeKJWvU_Kwp5YQ" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_j0JXEsuoEeKJWvU_Kwp5YQ" containerData="2113" selectedElement="_j0JXE8uoEeKJWvU_Kwp5YQ">
+>>>>>>> origin/Curtis_Branch
 =======
           <children xsi:type="basic:PartSashContainer" xmi:id="_j0JXEcuoEeKJWvU_Kwp5YQ" selectedElement="_j0J-JcuoEeKJWvU_Kwp5YQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_j0JXEsuoEeKJWvU_Kwp5YQ" containerData="2113" selectedElement="_j0JXE8uoEeKJWvU_Kwp5YQ">
@@ -97,8 +106,13 @@
               </children>
             </children>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <children xsi:type="basic:PartSashContainer" xmi:id="_j0J-JcuoEeKJWvU_Kwp5YQ" containerData="7500" selectedElement="_j0KlMMuoEeKJWvU_Kwp5YQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_j0KlMMuoEeKJWvU_Kwp5YQ" containerData="7500" selectedElement="_j0KlMcuoEeKJWvU_Kwp5YQ" horizontal="true">
+=======
+            <children xsi:type="basic:PartSashContainer" xmi:id="_j0J-JcuoEeKJWvU_Kwp5YQ" containerData="7887" selectedElement="_j0LMQ8uoEeKJWvU_Kwp5YQ">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_j0KlMMuoEeKJWvU_Kwp5YQ" containerData="6767" selectedElement="_j0KlMcuoEeKJWvU_Kwp5YQ" horizontal="true">
+>>>>>>> origin/Curtis_Branch
 =======
             <children xsi:type="basic:PartSashContainer" xmi:id="_j0J-JcuoEeKJWvU_Kwp5YQ" containerData="7887" selectedElement="_j0LMQ8uoEeKJWvU_Kwp5YQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_j0KlMMuoEeKJWvU_Kwp5YQ" containerData="6767" selectedElement="_j0KlMcuoEeKJWvU_Kwp5YQ" horizontal="true">
@@ -119,7 +133,11 @@
                 </children>
               </children>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <children xsi:type="basic:PartStack" xmi:id="_j0LMQ8uoEeKJWvU_Kwp5YQ" elementId="bottom" containerData="2500" selectedElement="_j0LMRMuoEeKJWvU_Kwp5YQ">
+=======
+              <children xsi:type="basic:PartStack" xmi:id="_j0LMQ8uoEeKJWvU_Kwp5YQ" elementId="bottom" containerData="3233" selectedElement="_j0LzUcuoEeKJWvU_Kwp5YQ">
+>>>>>>> origin/Curtis_Branch
 =======
               <children xsi:type="basic:PartStack" xmi:id="_j0LMQ8uoEeKJWvU_Kwp5YQ" elementId="bottom" containerData="3233" selectedElement="_j0LzUcuoEeKJWvU_Kwp5YQ">
 >>>>>>> origin/Curtis_Branch
@@ -130,7 +148,11 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_j0LMRsuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.jdt.ui.SourceView" ref="_jyrXcMuoEeKJWvU_Kwp5YQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_j0LzUMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.search.ui.views.SearchView" toBeRendered="false" ref="_jyr-gMuoEeKJWvU_Kwp5YQ"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <children xsi:type="advanced:Placeholder" xmi:id="_j0LzUcuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.console.ConsoleView" toBeRendered="false" ref="_jyr-gcuoEeKJWvU_Kwp5YQ"/>
+=======
+                <children xsi:type="advanced:Placeholder" xmi:id="_j0LzUcuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_jyr-gcuoEeKJWvU_Kwp5YQ"/>
+>>>>>>> origin/Curtis_Branch
 =======
                 <children xsi:type="advanced:Placeholder" xmi:id="_j0LzUcuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_jyr-gcuoEeKJWvU_Kwp5YQ"/>
 >>>>>>> origin/Curtis_Branch
@@ -161,6 +183,7 @@
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_jxx_kMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.editorss" selectedElement="_jxx_kcuoEeKJWvU_Kwp5YQ">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <children xsi:type="basic:PartStack" xmi:id="_jxx_kcuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_nrWSIMuoEeKJWvU_Kwp5YQ">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
@@ -170,6 +193,8 @@
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
 =======
+=======
+>>>>>>> origin/Curtis_Branch
       <children xsi:type="basic:PartStack" xmi:id="_jxx_kcuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_WlHpoMurEeKUrtkbyz7atQ">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
@@ -191,6 +216,9 @@
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.android.ide.eclipse.editors.CommonXmlEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/MemeApp/res/values/strings.xml&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>com.android.ide.eclipse.editors.CommonXmlEditor</tags>
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
           <tags>removeOnHide</tags>
         </children>
@@ -201,7 +229,10 @@
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <tags>activeOnClose</tags>
+=======
+>>>>>>> origin/Curtis_Branch
 =======
 >>>>>>> origin/Curtis_Branch
       <menus xmi:id="_kAP5YMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.jdt.ui.PackageExplorer">
@@ -223,8 +254,13 @@
       <tags>categoryTag:General</tags>
     </sharedElements>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <sharedElements xsi:type="basic:Part" xmi:id="_jyqJUMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide//icons/full/eview16/problems_view.gif" tooltip="2 errors, 2 warnings, 0 others" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+=======
+    <sharedElements xsi:type="basic:Part" xmi:id="_jyqJUMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide//icons/full/eview16/problems_view.gif" tooltip="0 errors, 2 warnings, 0 others" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings (2 items)&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;504&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+>>>>>>> origin/Curtis_Branch
 =======
     <sharedElements xsi:type="basic:Part" xmi:id="_jyqJUMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide//icons/full/eview16/problems_view.gif" tooltip="0 errors, 2 warnings, 0 others" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings (2 items)&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;504&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
@@ -250,10 +286,13 @@
       <tags>categoryTag:General</tags>
     </sharedElements>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <sharedElements xsi:type="basic:Part" xmi:id="_jyr-gcuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.console.ConsoleView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Console" iconURI="platform:/plugin/org.eclipse.ui.console//icons/full/cview16/console_view.gif" closeable="true">
       <tags>View</tags>
       <tags>categoryTag:General</tags>
 =======
+=======
+>>>>>>> origin/Curtis_Branch
     <sharedElements xsi:type="basic:Part" xmi:id="_jyr-gcuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.console.ConsoleView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Console" iconURI="platform:/plugin/org.eclipse.ui.console//icons/full/cview16/console_view.gif" tooltip="" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
@@ -263,6 +302,9 @@
         <tags>menuContribution:menu</tags>
       </menus>
       <toolbar xmi:id="_J2xHsMurEeKUrtkbyz7atQ" elementId="org.eclipse.ui.console.ConsoleView" visible="false"/>
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_jyr-gsuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.views.BookmarkView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Bookmarks" iconURI="platform:/plugin/org.eclipse.ui.ide//icons/full/eview16/bkmrk_nav.gif" closeable="true">
@@ -317,6 +359,7 @@
       <children xsi:type="menu:ToolBar" xmi:id="_jogHwMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jo4iQMuoEeKJWvU_Kwp5YQ" elementId="new.group"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jo5JUMuoEeKJWvU_Kwp5YQ" elementId="newWizardDropDown"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jo5JUcuoEeKJWvU_Kwp5YQ" elementId="new.ext" visible="false"/>
@@ -330,6 +373,8 @@
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jpSK4MuoEeKJWvU_Kwp5YQ" elementId="build.ext" visible="false"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jpSK4cuoEeKJWvU_Kwp5YQ" elementId="additions"/>
 =======
+=======
+>>>>>>> origin/Curtis_Branch
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_Fjt-IMurEeKUrtkbyz7atQ" elementId="new.group"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_Fjt-IcurEeKUrtkbyz7atQ" elementId="newWizardDropDown"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_Fjt-IsurEeKUrtkbyz7atQ" elementId="new.ext" visible="false"/>
@@ -342,6 +387,9 @@
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkDVUMurEeKUrtkbyz7atQ" elementId="build.group"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkD8YMurEeKUrtkbyz7atQ" elementId="build.ext" visible="false"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkD8YcurEeKUrtkbyz7atQ" elementId="additions"/>
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_jogHwcuoEeKJWvU_Kwp5YQ" elementId="additions" toBeRendered="false">
@@ -350,6 +398,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_j8HAQMuoEeKJWvU_Kwp5YQ" elementId="adt.actionSet.avdManager">
         <tags>Draggable</tags>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_j8go4MuoEeKJWvU_Kwp5YQ" elementId="android_project"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_j8hP8MuoEeKJWvU_Kwp5YQ" elementId="com.android.ide.eclipse.adt.ui.sdkmanager"/>
@@ -395,6 +444,8 @@
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_oIeTAMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_oIe6EMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 =======
+=======
+>>>>>>> origin/Curtis_Branch
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_F7Bq4MurEeKUrtkbyz7atQ" elementId="android_project"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_F7Bq4curEeKUrtkbyz7atQ" elementId="com.android.ide.eclipse.adt.ui.sdkmanager"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_F7Bq4surEeKUrtkbyz7atQ" elementId="com.android.ide.eclipse.adt.ui.avdmanager"/>
@@ -443,6 +494,9 @@
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_ImP7A8urEeKUrtkbyz7atQ" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_ImQiEMurEeKUrtkbyz7atQ" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_ImQiEcurEeKUrtkbyz7atQ" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_jogu0MuoEeKJWvU_Kwp5YQ" elementId="group.nav" toBeRendered="false">
@@ -451,6 +505,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_johV4MuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jpSK4suoEeKJWvU_Kwp5YQ" elementId="history.group"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jpSx8MuoEeKJWvU_Kwp5YQ" elementId="group.application" visible="false"/>
@@ -462,6 +517,8 @@
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_j8tdMMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_j8uEQMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
 =======
+=======
+>>>>>>> origin/Curtis_Branch
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkD8YsurEeKUrtkbyz7atQ" elementId="history.group"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkD8Y8urEeKUrtkbyz7atQ" elementId="group.application" visible="false"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkEjcMurEeKUrtkbyz7atQ" elementId="backardHistory"/>
@@ -471,6 +528,9 @@
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_F7EHIsurEeKUrtkbyz7atQ" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_F7EHI8urEeKUrtkbyz7atQ" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_F7EHJMurEeKUrtkbyz7atQ" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_joh88MuoEeKJWvU_Kwp5YQ" elementId="group.editor" toBeRendered="false">
@@ -484,8 +544,13 @@
       <children xsi:type="menu:ToolBar" xmi:id="_joikAMuoEeKJWvU_Kwp5YQ" elementId="org.eclipse.ui.workbench.help">
         <tags>Draggable</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jpUnIMuoEeKJWvU_Kwp5YQ" elementId="group.help"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_jpUnIcuoEeKJWvU_Kwp5YQ" elementId="group.application" visible="false"/>
+=======
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkFxkMurEeKUrtkbyz7atQ" elementId="group.help"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkFxkcurEeKUrtkbyz7atQ" elementId="group.application" visible="false"/>
+>>>>>>> origin/Curtis_Branch
 =======
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkFxkMurEeKUrtkbyz7atQ" elementId="group.help"/>
         <children xsi:type="menu:OpaqueToolItem" xmi:id="_FkFxkcurEeKUrtkbyz7atQ" elementId="group.application" visible="false"/>

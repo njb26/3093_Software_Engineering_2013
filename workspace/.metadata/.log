@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SESSION 2013-05-30 09:24:14.986 -----------------------------------------------
 eclipse.buildId=v21.1.0-569685
 java.version=1.7.0_21
@@ -56,6 +57,8 @@ org.eclipse.core.runtime.CoreException: The Class File Viewer cannot handle the 
 	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
 	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
 =======
+=======
+>>>>>>> origin/Curtis_Branch
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2013-06-02 14:44:08.684
 !MESSAGE File is Out of sync
@@ -437,11 +440,15 @@ java.lang.NullPointerException
 	at org.eclipse.jface.dialogs.ErrorDialog.buttonPressed(ErrorDialog.java:160)
 	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:624)
 	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
 	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
 	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+<<<<<<< HEAD
 <<<<<<< HEAD
 	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
 	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
@@ -450,6 +457,8 @@ java.lang.NullPointerException
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
 	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
 =======
+=======
+>>>>>>> origin/Curtis_Branch
 	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
 	at org.eclipse.jface.window.Window.open(Window.java:801)
 	at org.eclipse.jface.dialogs.ErrorDialog.open(ErrorDialog.java:357)
@@ -509,6 +518,9 @@ java.lang.NullPointerException
 	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
 	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
 	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
 	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
@@ -525,6 +537,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+<<<<<<< HEAD
 <<<<<<< HEAD
 !SUBENTRY 1 org.eclipse.jdt.ui 4 996 2013-05-30 09:32:48.074
 !MESSAGE The Class File Viewer cannot handle the given input ('org.eclipse.ui.ide.FileStoreEditorInput').
@@ -560,6 +573,8 @@ org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse
 	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
 	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
 =======
+=======
+>>>>>>> origin/Curtis_Branch
 
 !ENTRY org.eclipse.equinox.event 4 0 2013-06-02 14:44:31.075
 !MESSAGE Exception while dispatching event org.osgi.service.event.Event [topic=org/eclipse/e4/ui/model/ui/UIElement/visible/SET] to handler org.eclipse.e4.ui.services.internal.events.UIEventHandler@154f342
@@ -632,11 +647,15 @@ java.lang.NullPointerException
 	at org.eclipse.jface.dialogs.ErrorDialog.buttonPressed(ErrorDialog.java:160)
 	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:624)
 	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
 	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4169)
 	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3758)
+<<<<<<< HEAD
 <<<<<<< HEAD
 	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
 	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
@@ -645,6 +664,8 @@ java.lang.NullPointerException
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
 	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
 =======
+=======
+>>>>>>> origin/Curtis_Branch
 	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
 	at org.eclipse.jface.window.Window.open(Window.java:801)
 	at org.eclipse.jface.dialogs.ErrorDialog.open(ErrorDialog.java:357)
@@ -704,6 +725,9 @@ java.lang.NullPointerException
 	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
 	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
 	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
 	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
@@ -720,6 +744,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+<<<<<<< HEAD
 <<<<<<< HEAD
 !SESSION 2013-05-30 09:36:44.241 -----------------------------------------------
 eclipse.buildId=v21.1.0-569685
@@ -1076,6 +1101,8 @@ Binding(CTRL+SHIFT+\,
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
 =======
+=======
+>>>>>>> origin/Curtis_Branch
 
 !ENTRY org.eclipse.ui.ide 4 4 2013-06-02 14:44:31.125
 !MESSAGE Problems saving workspace
@@ -2065,4 +2092,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch

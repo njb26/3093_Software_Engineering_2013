@@ -11,6 +11,7 @@
 # generated files
 bin/
 gen/
+.metadata/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -30,6 +31,7 @@ proguard/
 # Untrack
 git rm --cached bin/
 git rm --cached gen/
+git rm --cachec .metadata/
 git rm --cached .classpath
 git rm --cached .project
 git rm --cached *.apk

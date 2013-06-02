@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/Curtis_Branch
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="1200" key="dialogWidth"/>
 		<item value="625" key="dialogHeight"/>
@@ -20,5 +23,8 @@
 			<item value="com.android.ide.eclipse.wizards.category"/>
 		</list>
 	</section>
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
 </section>
