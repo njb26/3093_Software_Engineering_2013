@@ -1,5 +1,9 @@
 PROBLEMS_FILTERS_MIGRATE=true
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=1368325907606
+=======
+platformState=1369921363620
+>>>>>>> origin/Curtis_Branch
 quickStart=false
 tipsAndTricks=true
