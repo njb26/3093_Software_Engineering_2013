@@ -16,5 +16,7 @@
     <!-- Curtis's strings -->
     <string name="camera_button_description">Camera Button</string>
     <string name="selection_button_description">Selection Button</string>
+    <string name="imgButton_take_string">Take a photo!</string>
+    <string name="imgButton_select_string">Select a photo!</string>
 
 </resources>
