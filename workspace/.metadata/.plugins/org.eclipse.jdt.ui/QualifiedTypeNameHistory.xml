@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <qualifiedTypeNameHistroy/>
 =======
+=======
+>>>>>>> origin/Curtis_Branch
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.provider.MediaStore"/>
 <fullyQualifiedTypeName name="android.provider.MediaStore.Images"/>
 </qualifiedTypeNameHistroy>
+<<<<<<< HEAD
+>>>>>>> origin/Curtis_Branch
+=======
 >>>>>>> origin/Curtis_Branch
