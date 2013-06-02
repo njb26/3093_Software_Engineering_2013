@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,56 +6,18 @@
     tools:context=".MainActivity" >
 
     <LinearLayout
-<<<<<<< HEAD
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-=======
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:baselineAligned="false"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/Curtis_Branch
-=======
->>>>>>> origin/Curtis_Branch
-=======
->>>>>>> origin/Curtis_Branch
-=======
->>>>>>> origin/Curtis_Branch
         android:orientation="horizontal"
         tools:context=".MainActivity" >
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            android:layout_weight="1"
-            android:text="@string/take" />
-
-        <ImageButton
-            android:id="@+id/imgButton_grab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/grab" />
-=======
-            android:layout_marginRight="30dp"
-            android:layout_weight="1" >
-
-            <ImageButton
-                android:id="@+id/imgButton_take"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/cam_button_selector"
-                android:contentDescription="@string/camera_button_description"
-=======
             android:layout_marginRight="30dp"
             android:layout_weight="1" >
 
@@ -75,100 +37,6 @@
                 android:layout_centerInParent="true"
                 android:text="@string/imgButton_take_string" />
         </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-=======
-            android:layout_marginRight="30dp"
-            android:layout_weight="1" >
-
-            <ImageButton
-                android:id="@+id/imgButton_take"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/cam_button_selector"
-                android:contentDescription="@string/camera_button_description"
-                android:scaleType="fitCenter" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imgButton_take"
-                android:layout_centerInParent="true"
-                android:text="@string/imgButton_take_string" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
->>>>>>> origin/Curtis_Branch
-=======
-            android:layout_marginRight="30dp"
-            android:layout_weight="1" >
-
-            <ImageButton
-                android:id="@+id/imgButton_take"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/cam_button_selector"
-                android:contentDescription="@string/camera_button_description"
-                android:scaleType="fitCenter" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imgButton_take"
-                android:layout_centerInParent="true"
-                android:text="@string/imgButton_take_string" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
->>>>>>> origin/Curtis_Branch
-            android:layout_marginLeft="30dp"
-            android:layout_weight="1" >
-
-            <ImageButton
-                android:id="@+id/imgButton_grab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:background="@drawable/gallery_button_selector"
-                android:contentDescription="@string/selection_button_description"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/Curtis_Branch
-=======
->>>>>>> origin/Curtis_Branch
-=======
->>>>>>> origin/Curtis_Branch
-                android:scaleType="fitCenter" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                android:layout_below="@id/imgButton_take"
-                android:layout_centerInParent="true"
-                android:text="@string/imgButton_take_string" />
-        </RelativeLayout>
-=======
-=======
->>>>>>> origin/Curtis_Branch
-=======
->>>>>>> origin/Curtis_Branch
-                android:layout_below="@id/imgButton_grab"
-                android:layout_centerInParent="true"
-                android:text="@string/imgButton_select_string" />
-        </RelativeLayout>
-    </LinearLayout>
->>>>>>> origin/Curtis_Branch
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -192,29 +60,14 @@
                 android:layout_centerInParent="true"
                 android:text="@string/imgButton_select_string" />
         </RelativeLayout>
->>>>>>> origin/Curtis_Branch
     </LinearLayout>
-    
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="@string/title" />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-</LinearLayout>
-=======
 </RelativeLayout>
->>>>>>> origin/Curtis_Branch
-=======
-</RelativeLayout>
->>>>>>> origin/Curtis_Branch
-=======
-</RelativeLayout>
->>>>>>> origin/Curtis_Branch
-=======
-</RelativeLayout>
->>>>>>> origin/Curtis_Branch
