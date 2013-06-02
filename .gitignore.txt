@@ -26,3 +26,11 @@ proguard/
 *.iml
 *.ipr
 *.iws
+
+# Untrack
+git rm --cached bin/
+git rm --cached gen/
+git rm --cached .classpath
+git rm --cached .project
+git rm --cached *.apk
+git rm --cached *.ap_
