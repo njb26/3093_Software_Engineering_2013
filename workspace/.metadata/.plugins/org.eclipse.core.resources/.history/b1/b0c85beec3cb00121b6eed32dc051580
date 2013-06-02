@@ -40,8 +40,8 @@ public class SelectionActivity extends Activity {
 		startActivity(intent);
 		break;
 		
-		/*case R.id.imgButton_stock:
-			Intent intent = new Intent(this, StockActivity.class);
+		/*case R.id.imgButton_take:
+			Intent intent = new Intent(this, cameraActivity.class);
 			startActivity(intent);
 			break;*/
 		

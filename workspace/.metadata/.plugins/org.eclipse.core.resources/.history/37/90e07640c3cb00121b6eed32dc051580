@@ -24,14 +24,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                	android:src="@drawable/gallery_image"
+                android:contentDescription="@string/camera_button_description"
                 android:scaleType="fitCenter" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imgButton_gallery"
+                android:layout_below="@id/imgButton_take"
                 android:layout_centerInParent="true"
-                android:text="@string/gallery" />
+                android:text="@strings/gallery" />
         </RelativeLayout>
         
         <RelativeLayout
@@ -41,17 +42,18 @@
             android:layout_weight="1" >
 
             <ImageButton
-                android:id="@+id/imgButton_stock"
+                android:id="@+id/imgButton_grab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:src="@drawable/stock_photo"
+                android:contentDescription="@strings/selection_button_description"
                 android:scaleType="fitCenter" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imgButton_stock"
+                android:layout_below="@id/imgButton_grab"
                 android:layout_centerInParent="true"
                 android:text="@strings/stock" />
         </RelativeLayout>
