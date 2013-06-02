@@ -12,5 +12,12 @@
     <string name="title_activity_camera">CameraActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="photo">Photo</string>
+<<<<<<< HEAD
+=======
+    
+    <!-- Curtis's strings -->
+    <string name="camera_button_description">Camera Button</string>
+    <string name="selection_button_description">Selection Button</string>
+>>>>>>> origin/Curtis_Branch
 
 </resources>

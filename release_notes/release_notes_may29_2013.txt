@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 In this release:
 
 
+=======
+In this release:
+>>>>>>> origin/Curtis_Branch
 
 REQUIREMENTS DOC:
 -Our suggestion was to create a new name for the app, we could not
@@ -8,12 +12,19 @@ find one that we liked more than the current "Meme My Friends"
 and as this is relatively low-priority, did not update, and will
 continue to think on this
 
+<<<<<<< HEAD
 
 SPECIFICATIONS DOC:
 -Added in the first version of the use-case diagram
 -Added first version of system metaphor
 -Added in user story for this release
 
+=======
+SPECIFICATIONS DOC:
+-Added in the first version of the use-case diagram
+-Added first version of system metaphor
+-Added in user story for this release
+>>>>>>> origin/Curtis_Branch
 
 
 APPLICATION:
@@ -32,6 +43,7 @@ created, with perhaps some stock photos to choose from.
 	-actually selecting photo is a nice-to-have
 
 If we have time: have the "camera" activity working, to take a photo
+<<<<<<< HEAD
 	-nice-to-have: saving the photo to the system.
 
 
@@ -55,3 +67,6 @@ Next steps (Implementation):
 3. Research on Facebook/twitter API (find out how other apps do it)
 
 Good work on the use-case diagram. You are the only team that has a detailed use case diagram. Meet frequently, brainstorm and code as a TEAM!
+=======
+	-nice-to-have: saving the photo to the system.
+>>>>>>> origin/Curtis_Branch
