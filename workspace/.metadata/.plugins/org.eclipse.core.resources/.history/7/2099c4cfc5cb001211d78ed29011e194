@@ -1,27 +1,26 @@
 package com.uc.memeapp;
-package com.uc.memeapp;
 
+import android.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
-public class MainActivity extends Activity implements OnClickListener {
-	private ImageButton takeButton;
-	private ImageButton selectButton;
+public class SelectionActivity extends Activity {
+	private ImageButton galleryButton;
+	private ImageButton stockButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        takeButton = (ImageButton) findViewById(R.id.imgButton_take);
-        selectButton = (ImageButton) findViewById(R.id.imgButton_grab);
+        galleryButton = (ImageButton) findViewById(R.id.imgButton_gallery);
+        stockButton = (ImageButton) findViewById(R.id.imgButton_stock);
         
-        takeButton.setOnClickListener(this);
-        selectButton.setOnClickListener(this);
+        galleryButton.setOnClickListener(this);
+        stockButton.setOnClickListener(this);
     }
 
 
@@ -37,13 +36,13 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch(v.getId()){
-		case (R.id.imgButton_grab):
-			Intent intent = new Intent(this, SelectionActivity.class);
+		case (R.id.imgButton_gallery):
+			Intent intent = new Intent(this, GalleryActivity.class);
 		startActivity(intent);
 		break;
 		
-		/*case R.id.imgButton_take:
-			Intent intent = new Intent(this, cameraActivity.class);
+		/*case R.id.imgButton_stock:
+			Intent intent = new Intent(this, StockActivity.class);
 			startActivity(intent);
 			break;*/
 		
