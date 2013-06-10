@@ -1,0 +1,19 @@
+IN THIS RELEASE:
+
+REQUIREMENTS DOC:
+
+- Revised, updated, and all sections are complete, with the exception of the API, it will
+  be added in once we have researched them
+- App has a new name: InstaMeme
+
+SPECIFICATIONS DOC:
+
+- Revised Use-Case Diagram, user story, System Metaphor, and app name
+
+
+APPLICATION:
+- MainActivity updated
+- Selection Activity updated
+	- Both follow the exact same format
+	- fixed the "scaling" problem so that it will display correctly on all size screens
+- Activity for Image Selection created, some code implemented, not complete. 
