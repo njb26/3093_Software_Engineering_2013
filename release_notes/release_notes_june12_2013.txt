@@ -17,3 +17,8 @@ APPLICATION:
 	- Both follow the exact same format
 	- fixed the "scaling" problem so that it will display correctly on all size screens
 - Activity for Image Selection created, some code implemented, not complete. 
+- Fixed .xml errors stopping R.java build
+- Added in basic Edit Photo Activity
+	-only contains buttons needed
+	-not "prettied" because theres no reason to if we dont have a photo displaying yet
+		-would just have to be changed again
