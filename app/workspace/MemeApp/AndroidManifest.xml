@@ -34,6 +34,10 @@
             android:name="com.uc.memeapp.GalleryActivity"
             android:label="@string/title_activity_gallery" >
         </activity>
+        <activity
+            android:name="com.uc.memeapp.PhotoEditActivity"
+            android:label="@string/title_activity_photo_edit" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,5 +1,4 @@
 package com.uc.memeapp;
-package com.uc.memeapp;
 
 import android.app.Activity;
 import android.content.Intent;
