@@ -22,3 +22,23 @@ APPLICATION:
 	-only contains buttons needed
 	-not "prettied" because theres no reason to if we dont have a photo displaying yet
 		-would just have to be changed again
+
+Requirements Document:
+1. Include timeline and milestones for each phase (under scope)
+2. "Terminology" section missing!
+3. "InstaMeme" sounds good. 
+
+Specification Document:
+1. User stories are important!! Update them.
+
+Next steps:
+1. Have images load from the gallery or stock photos.
+2. Write unit test cases for modules you have implemented so far (use user stories to identify test scenarios). 
+3. Henceforth, Write unit test cases before you implement a module/scenario (specifically, for UI bugs that you currently have)
+4. Include comments in javadoc style to all java source files (This is mandatory!)
+4. Include comments (document) .xml files. 
+
+Good job on documenting non-functional requirements. Keep up the good work!
+
+P.S: Why is the formatting in release notes (word wrapping) messed up? Is it because of the branch-merge issue?
+
