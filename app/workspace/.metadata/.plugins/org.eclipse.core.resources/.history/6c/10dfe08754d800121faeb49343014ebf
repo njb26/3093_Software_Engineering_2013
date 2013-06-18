@@ -12,15 +12,9 @@
  android:layout_height="wrap_content"
  />
 <Button
- android:id="@+id/load_image"
+ android:id="@+id/loadimage"
  android:layout_width="fill_parent"
  android:layout_height="wrap_content"
  android:text="@string/accept"
- />
-<Button
- android:id="@+id/get_new_image"
- android:layout_width="fill_parent"
- android:layout_height="wrap_content"
- android:text="@string/wrong_photo"
  />
 </LinearLayout>

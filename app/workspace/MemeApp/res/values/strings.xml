@@ -24,6 +24,7 @@
     <string name="save_button_description">Save Button</string>
     <string name="upload_button_description">Upload Button</string>
     <string name="delete_button_description">Delete Button</string>
+    <string name="wrong_photo">Select a Different Photo</string>
     
 
 </resources>

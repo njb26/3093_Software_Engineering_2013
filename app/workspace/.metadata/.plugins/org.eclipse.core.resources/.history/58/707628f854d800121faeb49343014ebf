@@ -51,19 +51,14 @@ import android.view.View;
          
      }
     
-    public void onClick(View v) {
+    @Override
+	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch(v.getId()){
-			case (R.id.load_image):
-				Intent intent = new Intent(this, PhotoEditActivity.class);
-				startActivity(intent);
-				break;
-			case(R.id.get_new_image):
-				Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
-	    	 	photoPickerIntent.setType("image/*");
-				startActivityForResult(photoPickerIntent, 1);
-				break;
-		
+		case (R.id.load_image):
+			Intent intent = new Intent(this, GalleryActivity.class);
+		startActivity(intent);
+		break;
 		}
     }
 }
