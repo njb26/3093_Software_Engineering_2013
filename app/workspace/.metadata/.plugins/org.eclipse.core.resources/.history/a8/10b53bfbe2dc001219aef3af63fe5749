@@ -1,7 +1,3 @@
-/**
- * @author Niklas Bauer
- */
-
 package com.uc.memeapp;
 
 import android.app.Activity;
@@ -16,20 +12,13 @@ public class SelectionActivity extends Activity implements OnClickListener {
 	private ImageButton galleryButton;
 	private ImageButton stockButton;
 
-	
-	/**
-	 * Creates the two buttons when the activity loads
-	 * 
-	 * @param savedInstanceState, passed in to the super
-	 * @return void
-	 */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
-        /*Button if they wish to select any image in the device's photo gallery*/
+        /**Button if they wish to select any image in the device's photo gallery*/
         galleryButton = (ImageButton) findViewById(R.id.imgButton_gallery);
-        /*Button if the user wishes to select an image provided by the app, a stock image*/
+        /**Button id the user wishes to select an image provided by the app, a stock image*/
         stockButton = (ImageButton) findViewById(R.id.imgButton_stock);
         
         galleryButton.setOnClickListener(this);
@@ -44,20 +33,13 @@ public class SelectionActivity extends Activity implements OnClickListener {
         return true;
     }
 
-    /**
-     * Called when either of the buttons are pressed, launches 
-     * the correct activiy
-     * 
-     * Swtich statement for the two buttons
-	 * first is to launch the selection from the photo gallery
-	 * second is to launch the stock photo selection activity
-	 * 
-	 * @param View v, the view of the button that is pressed
-	 * 			call its getId() to verify which button it is
-	 * @return void	 
-	 */
+
 	@Override
 	public void onClick(View v) {
+		/**Swtich statement for the two buttons
+		 * first is to launch the selection from the photo gallery
+		 * second is to launch the stock photo selection activity
+		 */
 		switch(v.getId()){
 		case (R.id.imgButton_gallery):
 			Intent intent = new Intent(this, GalleryActivity.class);

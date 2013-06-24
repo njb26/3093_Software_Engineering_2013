@@ -72,18 +72,17 @@ import android.view.View;
              }
             }
          
+     }
      
-    /** 
-     * for the two buttons, accept, and take another photo
-     * */
+    /** for the two buttons, accept, and take another photo*/
     public void onClick(View v) {
 		switch(v.getId()){
-			/* Select, or loads, the image on to the PhotoEditActivity so that the user can add text*/
+			/** Select, or loads, the image on to the PhotoEditActivity so that the user can add text*/
 			case (R.id.load_image):
 				Intent intent = new Intent(this, PhotoEditActivity.class);
 				startActivity(intent);
 				break;
-			/* If the user did not like the selected image, then it will relaunch the selection*/
+			/** If the user did not like the selected image, then it will relaunch the selection*/
 			case(R.id.get_new_image):
 				Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
 	    	 	photoPickerIntent.setType("image/*");
