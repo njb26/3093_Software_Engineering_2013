@@ -1,7 +1,9 @@
 package com.uc.memeapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -34,7 +36,14 @@ public class MainActivity extends Activity implements OnClickListener {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
+    
+	private boolean checkCameraHardware(Context context) {
+		if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY)){
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	@Override
 	public void onClick(View v) {
@@ -44,14 +53,14 @@ public class MainActivity extends Activity implements OnClickListener {
 		 */
 		switch(v.getId()){
 		case (R.id.imgButton_grab):
-			Intent intent = new Intent(this, SelectionActivity.class);
-		startActivity(intent);
-		break;
-		//TODO: uncomment and format this so that it will launch the take photo activity		
-		/*case R.id.imgButton_take:
-			Intent intent = new Intent(this, cameraActivity.class);
-			startActivity(intent);
-			break;*/
+			Intent selectionIntent = new Intent(this, SelectionActivity.class);
+			startActivity(selectionIntent);
+			break;
+		
+		case R.id.imgButton_take:
+			Intent cameraIntent = new Intent(this, CameraActivity.class);
+			if (checkCameraHardware(this)) startActivity(cameraIntent);
+			break;
 		
 		}
 		
