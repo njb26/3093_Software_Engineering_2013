@@ -6,7 +6,7 @@
  >
 
 	<ImageView
-	android:contentDescription="@string/gallery_image"
+	 android:contentDescription="@string/gallery_image"
  	android:id="@+id/targetimage"
  	android:layout_width="wrap_content"
 	 android:layout_height="wrap_content"

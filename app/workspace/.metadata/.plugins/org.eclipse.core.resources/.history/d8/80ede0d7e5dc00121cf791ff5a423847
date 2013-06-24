@@ -51,7 +51,7 @@ import android.widget.ImageView;
                 Cursor cursor = getContentResolver().query(selectedImage, new String[] { android.provider.MediaStore.Images.ImageColumns.DATA }, null, null, null);
                 cursor.moveToFirst();
                 cursor.close();
-                ImageView displayImage = (ImageView) findViewById(R.id.targetimage);
+                ImageView displayImage = (Imageview) findViewById(R.id.targetimage);
                 displayImage.setImageURI(selectedImage);
                 //commented out, approaching it in a different method, the one used above 
                 /* try 
