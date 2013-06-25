@@ -9,7 +9,9 @@
 	android:contentDescription="@string/gallery_image"
  	android:id="@+id/targetimage"
  	android:layout_width="fill_parent"
-	 android:layout_height="wrap_content"
+	android:layout_height="wrap_content"
+	android:adjustViewBounds="true"
+	android:scaleType="fitCenter"
  	/>
 	
 	<Button

@@ -6,7 +6,6 @@
     <string name="title_activity_selection">SelectionActivity</string>
     <string name="gallery">Gallery</string>
     <string name="stock">Stock</string>
-    <string name="title">MemeApp</string>
     <string name="take">Take a Photo</string>
     <string name="grab">Grab a Photo</string>
     <string name="title_activity_camera">CameraActivity</string>
