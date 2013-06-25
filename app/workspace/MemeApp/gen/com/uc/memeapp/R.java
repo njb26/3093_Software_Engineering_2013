@@ -70,9 +70,8 @@ public final class R {
         public static final int accept=0x7f06000a;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
-        /**  Curtis's strings 
-         */
         public static final int camera_button_description=0x7f06000d;
+        public static final int camera_string=0x7f060017;
         public static final int delete_button_description=0x7f060015;
         public static final int gallery=0x7f060003;
         public static final int gallery_image=0x7f06000b;

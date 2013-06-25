@@ -14,7 +14,6 @@
     <string name="accept">Accept!</string>
     <string name="gallery_image">Image from Gallery</string>
     <string name="title_activity_gallery">GalleryActivity</string>
-    <!-- Curtis's strings -->
     <string name="camera_button_description">Camera Button</string>
     <string name="selection_button_description">Selection Button</string>
     <string name="imgButton_take_string">Take a photo!</string>
@@ -25,6 +24,7 @@
     <string name="upload_button_description">Upload Button</string>
     <string name="delete_button_description">Delete Button</string>
     <string name="wrong_photo">Select a Different Photo</string>
+    <string name="camera_string">Camera under development.</string>
     
 
 </resources>
