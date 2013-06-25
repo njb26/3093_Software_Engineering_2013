@@ -21,7 +21,7 @@ import android.widget.ImageView;
      @Override
      public void onCreate(Bundle savedInstanceState) {
     	 super.onCreate(savedInstanceState);
-    	 setContentView(R.layout.activity_gallery);
+    	 
     	 
     	 /* Creates the intent to select content from the device*/
     	 Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
@@ -32,6 +32,7 @@ import android.widget.ImageView;
     	  * Done in onActivityResult
     	  */
     	 startActivityForResult(photoPickerIntent,1); 
+    	 setContentView(R.layout.activity_gallery);
      }
      /**
       * Activity for photograph selection is launched
