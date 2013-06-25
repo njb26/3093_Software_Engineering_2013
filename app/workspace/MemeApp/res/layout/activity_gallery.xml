@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
- android:orientation="vertical"
- android:layout_width="fill_parent"
- android:layout_height="fill_parent"
- >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-	<ImageView
-	android:contentDescription="@string/gallery_image"
- 	android:id="@+id/targetimage"
- 	android:layout_width="fill_parent"
-	android:layout_height="wrap_content"
-	android:adjustViewBounds="true"
-	android:scaleType="fitCenter"
- 	/>
-	
-	<Button
- 	android:id="@+id/load_image"
- 	android:layout_width="fill_parent"
- 	android:layout_height="wrap_content"
- 	android:layout_below="@id/targetimage"
- 	android:text="@string/accept"
- 	/>
-	
-	<Button
-	android:id="@+id/get_new_image"
- 	android:layout_width="fill_parent"
- 	android:layout_height="wrap_content"
- 	android:text="@string/wrong_photo"
- 	android:layout_below="@id/load_image"
- 	/>
-	
+    <ImageView
+        android:id="@+id/targetimage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/gallery_image"
+        android:scaleType="fitCenter" />
+
+    <Button
+        android:id="@+id/load_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/targetimage"
+        android:text="@string/accept" />
+
+    <Button
+        android:id="@+id/get_new_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/load_image"
+        android:text="@string/wrong_photo" />
+
 </RelativeLayout>
