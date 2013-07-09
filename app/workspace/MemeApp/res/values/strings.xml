@@ -24,6 +24,7 @@
     <string name="delete_button_description">Delete Button</string>
     <string name="wrong_photo">Select a Different Photo</string>
     <string name="camera_string">Camera under development.</string>
-    
+    <string name="title_activity_stock">StockActivity</string>
+    <string name="stock_image">Stock Image</string>
 
 </resources>

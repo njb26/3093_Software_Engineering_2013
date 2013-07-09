@@ -38,6 +38,10 @@
             android:name="com.uc.memeapp.PhotoEditActivity"
             android:label="@string/title_activity_photo_edit" >
         </activity>
+        <activity
+            android:name="com.uc.memeapp.StockActivity"
+            android:label="@string/title_activity_stock" >
+        </activity>
     </application>
 
 </manifest>
