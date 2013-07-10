@@ -56,12 +56,12 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent selectionIntent = new Intent(this, SelectionActivity.class);
 			startActivity(selectionIntent);
 			break;
-		/*
+		
 		case R.id.imgButton_take:
 			Intent cameraIntent = new Intent(this, CameraActivity.class);
 			if (checkCameraHardware(this)) startActivity(cameraIntent);
 			break;
-			*/
+			
 		
 		}
 		
