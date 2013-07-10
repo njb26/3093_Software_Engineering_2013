@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="PACKAGE"
+    package="com.uc.memeapp.test"
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="17" />
+    <uses-sdk android:minSdkVersion="8" />
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
-        android:targetPackage="TEST_TARGET_PCKG" />
+        android:targetPackage="com.uc.memeapp" />
 
     <application
         android:icon="@drawable/ic_launcher"
