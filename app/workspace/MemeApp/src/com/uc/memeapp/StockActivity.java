@@ -74,7 +74,7 @@ public class StockActivity extends Activity implements OnClickListener {
 		Intent photoIntent = new Intent(this, PhotoEditActivity.class);
 		int message = v.getId();
 		photoIntent.putExtra("photo", message);
-		startActivity(photoIntent);			
+		//startActivity(photoIntent);			
 		
 	}
 
