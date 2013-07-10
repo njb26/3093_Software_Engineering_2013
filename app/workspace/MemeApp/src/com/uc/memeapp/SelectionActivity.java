@@ -16,61 +16,64 @@ public class SelectionActivity extends Activity implements OnClickListener {
 	private ImageButton galleryButton;
 	private ImageButton stockButton;
 
-	
 	/**
 	 * Creates the two buttons when the activity loads
 	 * 
-	 * @param savedInstanceState, passed in to the super
+	 * @param savedInstanceState
+	 *            , passed in to the super
 	 * @return void
 	 */
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selection);
-        /*Button if they wish to select any image in the device's photo gallery*/
-        galleryButton = (ImageButton) findViewById(R.id.imgButton_gallery);
-        /*Button if the user wishes to select an image provided by the app, a stock image*/
-        stockButton = (ImageButton) findViewById(R.id.imgButton_stock);
-        
-        galleryButton.setOnClickListener(this);
-        stockButton.setOnClickListener(this);
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_selection);
+		/* Button if they wish to select any image in the device's photo gallery */
+		galleryButton = (ImageButton) findViewById(R.id.imgButton_gallery);
+		/*
+		 * Button if the user wishes to select an image provided by the app, a
+		 * stock image
+		 */
+		stockButton = (ImageButton) findViewById(R.id.imgButton_stock);
 
+		galleryButton.setOnClickListener(this);
+		stockButton.setOnClickListener(this);
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
 
-    /**
-     * Called when either of the buttons are pressed, launches 
-     * the correct activiy
-     * 
-     * Swtich statement for the two buttons
-	 * first is to launch the selection from the photo gallery
-	 * second is to launch the stock photo selection activity
+	/**
+	 * Called when either of the buttons are pressed, launches the correct
+	 * activity
 	 * 
-	 * @param View v, the view of the button that is pressed
-	 * 			call its getId() to verify which button it is
-	 * @return void	 
+	 * Swtich statement for the two buttons first is to launch the selection
+	 * from the photo gallery second is to launch the stock photo selection
+	 * activity
+	 * 
+	 * @param View
+	 *            v, the view of the button that is pressed call its getId() to
+	 *            verify which button it is
+	 * @return void
 	 */
 	@Override
 	public void onClick(View v) {
-		switch(v.getId()){
+		Intent intent;
+		switch (v.getId()) {
 		case (R.id.imgButton_gallery):
-			Intent intent = new Intent(this, GalleryActivity.class);
-		startActivity(intent);
-		break;
-		//TODO: uncomment this and format correctly once the stock activity selection is implemented
-		/*case R.id.imgButton_stock:
-			Intent intent = new Intent(this, StockActivity.class);
+			intent = new Intent(this, GalleryActivity.class);
 			startActivity(intent);
-			break;*/
-		
+			break;
+		case (R.id.imgButton_stock):
+			intent = new Intent(this, StockActivity.class);
+			startActivity(intent);
+			break;
+
 		}
-		
+
 	}
-    
+
 }
