@@ -1,0 +1,36 @@
+IN THIS RELEASE:
+
+
+REQUIREMENTS DOC:
+
+
+
+
+SPECIFICATIONS DOC:
+
+-Added in User stories
+-Test plan is large, placed in separate file in ~/docs folder
+
+APPLICATION:
+
+
+- Camera Activity added, loads camera
+	-TODO: take photos, send to the photoEditActivity
+- Stock photo activity created
+	-TODO: does not load, fix .xml to be GridView and see if that works
+- Created JUnit tests
+	-verify camera
+	-verify main activity buttons work (2 tests in one file)
+	-verify selection activity buttons work (2 tests in one file)
+		-there are commented out tests, because they are so similar, as I was learning
+		-put these in separate tests
+-have done initial research to post to Twitter, found all for posting a text status
+	-need to see how it changes when posting image
+
+
+FOR NEXT RELEASE:
+-fix stock .xml
+-send pictures to photo edit
+-take pictures
+-if enough time, implement overlaying text
+	-if not, do research and learn
