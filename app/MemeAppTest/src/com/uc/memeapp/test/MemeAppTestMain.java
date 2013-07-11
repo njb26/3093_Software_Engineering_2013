@@ -60,8 +60,15 @@ public class MemeAppTestMain extends
 						5000);*/
 		 Activity nextActivity =
 		 getInstrumentation().waitForMonitorWithTimeout(activityMonitorCamera,
-		 10000);
+		 5000);
 		assertNotNull(nextActivity);
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		nextActivity.finish();
 	}
 }
