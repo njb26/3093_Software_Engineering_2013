@@ -34,3 +34,18 @@ FOR NEXT RELEASE:
 -take pictures
 -if enough time, implement overlaying text
 	-if not, do research and learn
+
+
+
+Comments:
+1. The following is missing in the specs. document.
+
+"Create a table in the specification document that includes the release name and number, release date, the percentage of tests passed/failed and the code coverage."
+
+2.  Complete camera feature.
+3. Try grid view for stock photos. If possible, get text overlay to work. 
+4. Add comments (preferably, javadoc compatible) to all code. This is important. 
+5. Try to at least 2 code reviews (one per member) for each release, and work together. 
+6. Continue writing test cases. Update the table (mentioned in [1]) for this release and the upcoming release.
+
+Good job on the existing test plan and all features that you've so far. I look forward to seeing more tests and "close-to-complete" features. 
