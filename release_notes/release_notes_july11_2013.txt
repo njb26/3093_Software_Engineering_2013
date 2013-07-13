@@ -47,5 +47,6 @@ Comments:
 4. Add comments (preferably, javadoc compatible) to all code. This is important. 
 5. Try to at least 2 code reviews (one per member) for each release, and work together. 
 6. Continue writing test cases. Update the table (mentioned in [1]) for this release and the upcoming release.
+7. Having a list of bugs/fixes is a great idea. Nice job!
 
-Good job on the existing test plan and all features that you've so far. I look forward to seeing more tests and "close-to-complete" features. 
+Good work on the existing test plan and all features that you've so far. I look forward to seeing more tests and "close-to-complete" features. 
