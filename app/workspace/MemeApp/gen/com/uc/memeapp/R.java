@@ -66,10 +66,11 @@ public final class R {
         public static final int yo_dawg=0x7f020026;
     }
     public static final class id {
-        public static final int action_settings=0x7f090032;
+        public static final int action_settings=0x7f09000f;
         public static final int button_capture=0x7f090001;
         public static final int camera_preview=0x7f090000;
         public static final int get_new_image=0x7f090004;
+        public static final int gridview=0x7f09000e;
         public static final int image_to_edit=0x7f090007;
         public static final int imgButton_delete=0x7f09000b;
         public static final int imgButton_gallery=0x7f09000c;
@@ -79,43 +80,7 @@ public final class R {
         public static final int imgButton_stock=0x7f09000d;
         public static final int imgButton_take=0x7f090005;
         public static final int load_image=0x7f090003;
-        public static final int row01=0x7f09000e;
-        public static final int row02=0x7f090012;
-        public static final int row03=0x7f090016;
-        public static final int row04=0x7f09001a;
-        public static final int row05=0x7f09001e;
-        public static final int row06=0x7f090022;
-        public static final int row07=0x7f090026;
-        public static final int row08=0x7f09002a;
-        public static final int row09=0x7f09002e;
         public static final int save_upload_buttons=0x7f090008;
-        public static final int stock01=0x7f09000f;
-        public static final int stock02=0x7f090010;
-        public static final int stock03=0x7f090011;
-        public static final int stock04=0x7f090013;
-        public static final int stock05=0x7f090014;
-        public static final int stock06=0x7f090015;
-        public static final int stock07=0x7f090017;
-        public static final int stock08=0x7f090018;
-        public static final int stock09=0x7f090019;
-        public static final int stock10=0x7f09001b;
-        public static final int stock11=0x7f09001c;
-        public static final int stock12=0x7f09001d;
-        public static final int stock13=0x7f09001f;
-        public static final int stock14=0x7f090020;
-        public static final int stock15=0x7f090021;
-        public static final int stock16=0x7f090023;
-        public static final int stock17=0x7f090024;
-        public static final int stock18=0x7f090025;
-        public static final int stock19=0x7f090027;
-        public static final int stock20=0x7f090028;
-        public static final int stock21=0x7f090029;
-        public static final int stock22=0x7f09002b;
-        public static final int stock23=0x7f09002c;
-        public static final int stock24=0x7f09002d;
-        public static final int stock25=0x7f09002f;
-        public static final int stock26=0x7f090030;
-        public static final int stock27=0x7f090031;
         public static final int targetimage=0x7f090002;
     }
     public static final class layout {
