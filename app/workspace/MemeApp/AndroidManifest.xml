@@ -45,7 +45,8 @@
         </activity>
         <activity
             android:name="com.uc.memeapp.GalleryActivity"
-            android:label="@string/title_activity_gallery" >
+            android:label="@string/title_activity_gallery"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.uc.memeapp.PhotoEditActivity"

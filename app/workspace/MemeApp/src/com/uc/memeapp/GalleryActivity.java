@@ -49,6 +49,7 @@ public class GalleryActivity extends Activity implements OnClickListener {
     	 redoButton = (Button) findViewById(R.id.get_new_image);
     	 acceptButton.setOnClickListener(this);
     	 redoButton.setOnClickListener(this);
+    	 
      }
      /**
       * Activity for photograph selection is launched
@@ -71,6 +72,7 @@ public class GalleryActivity extends Activity implements OnClickListener {
                 cursor.close();
                 ImageView displayImage = (ImageView) findViewById(R.id.targetimage);
                 displayImage.setImageURI(selectedImage);
+                
              }
              //if result is not ok... kinda self explanatory
              else{
