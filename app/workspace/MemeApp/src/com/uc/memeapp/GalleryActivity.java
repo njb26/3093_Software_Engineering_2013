@@ -13,7 +13,16 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
-    public class GalleryActivity extends Activity implements OnClickListener {
+/**
+ * Loads an PhotoPicker Intent to get an image
+ * working on getting it from all locations:gallery, dropbox, google drive, etc.
+ * once picture is selected, it displays in activity
+ * either accept and send it to be edited, or select new picture
+ * @author Niklas
+ *
+ */
+
+public class GalleryActivity extends Activity implements OnClickListener {
 
     Button acceptButton;
     Button redoButton;
