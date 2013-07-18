@@ -7,13 +7,13 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.app.Activity;
-import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -28,7 +28,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 	private static final String TAG = "CameraActivity";
 	protected static final int MEDIA_TYPE_IMAGE = 1;
 	private Button captureButton;
-	private static android.hardware.Camera.CameraInfo info = new android.hardware.Camera.CameraInfo();
+	//private static android.hardware.Camera.CameraInfo info = new android.hardware.Camera.CameraInfo();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
