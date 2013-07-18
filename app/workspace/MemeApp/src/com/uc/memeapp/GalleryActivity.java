@@ -6,22 +6,24 @@ package com.uc.memeapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 
-    public class GalleryActivity extends Activity {
+    public class GalleryActivity extends Activity implements OnClickListener {
 
-    //not used... yet	
-    Bitmap selectedContactPicture;    
-
+    Button acceptButton;
+    Button redoButton;
+    Bundle instance;
+    String path;
     /** Called when the activity is first created. */
      @Override
      public void onCreate(Bundle savedInstanceState) {
     	 super.onCreate(savedInstanceState);
-    	 
+    	 instance = savedInstanceState;
     	 
     	 /* Creates the intent to select content from the device*/
     	 Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
@@ -33,6 +35,11 @@ import android.widget.ImageView;
     	  */
     	 startActivityForResult(photoPickerIntent,1); 
     	 setContentView(R.layout.activity_gallery);
+    	 
+    	 acceptButton = (Button) findViewById(R.id.accept_image);
+    	 redoButton = (Button) findViewById(R.id.get_new_image);
+    	 acceptButton.setOnClickListener(this);
+    	 redoButton.setOnClickListener(this);
      }
      /**
       * Activity for photograph selection is launched
@@ -48,27 +55,13 @@ import android.widget.ImageView;
              {
             	 /**opens the selection activity for photographs*/
                 Uri selectedImage = imageReturnedIntent.getData();
+                path = selectedImage.toString();
                 // InputStream imageStream = null;
                 Cursor cursor = getContentResolver().query(selectedImage, new String[] { android.provider.MediaStore.Images.ImageColumns.DATA }, null, null, null);
                 cursor.moveToFirst();
                 cursor.close();
                 ImageView displayImage = (ImageView) findViewById(R.id.targetimage);
                 displayImage.setImageURI(selectedImage);
-                //commented out, approaching it in a different method, the one used above 
-                /* try 
-                 {
-                     imageStream = getContentResolver().openInputStream(imageReturnedIntent.getData());
-                 } 
-                catch (FileNotFoundException e) 
-                {
-                  e.printStackTrace();
-                 }
-
-                 BitmapFactory.Options options = new BitmapFactory.Options();
-                 options.inSampleSize =8;
-
-                 selectedContactPicture = BitmapFactory.decodeStream(imageStream,null,options);
-                 setContactPicture.setBackgroundDrawable(new BitmapDrawable(selectedContactPicture)); */
              }
              //if result is not ok... kinda self explanatory
              else{
@@ -83,15 +76,15 @@ import android.widget.ImageView;
     public void onClick(View v) {
 		switch(v.getId()){
 			/* Select, or loads, the image on to the PhotoEditActivity so that the user can add text*/
-			case (R.id.load_image):
+			case (R.id.accept_image):
 				Intent intent = new Intent(this, PhotoEditActivity.class);
+				intent.putExtra("path", path);
+				intent.putExtra("caller", "Gallery");
 				startActivity(intent);
 				break;
 			/* If the user did not like the selected image, then it will relaunch the selection*/
 			case(R.id.get_new_image):
-				Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
-	    	 	photoPickerIntent.setType("image/*");
-				startActivityForResult(photoPickerIntent, 1);
+				this.onCreate(instance);
 				break;
 		
 		}

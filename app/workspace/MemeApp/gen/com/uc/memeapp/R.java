@@ -66,6 +66,7 @@ public final class R {
         public static final int yo_dawg=0x7f020026;
     }
     public static final class id {
+        public static final int accept_image=0x7f090003;
         public static final int action_settings=0x7f09000f;
         public static final int button_capture=0x7f090001;
         public static final int camera_preview=0x7f090000;
@@ -79,7 +80,6 @@ public final class R {
         public static final int imgButton_save=0x7f090009;
         public static final int imgButton_stock=0x7f09000d;
         public static final int imgButton_take=0x7f090005;
-        public static final int load_image=0x7f090003;
         public static final int save_upload_buttons=0x7f090008;
         public static final int targetimage=0x7f090002;
     }
