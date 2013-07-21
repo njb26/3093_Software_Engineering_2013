@@ -1,0 +1,13 @@
+NOTE: Always remember to check-in release notes
+
+Comments:
+1. The following is still missing in the specs. document.
+
+"Create a table in the specification document that includes the release name and number, release date, the percentage of tests passed/failed and the code coverage."
+
+2. Add ability to save pictures from the camera (complete all features related to the camera)
+3. Add ability to save text overlay on pictures.
+4. Add captions to pics in the stock.
+5. Write new, simple raw unit test cases for new features
+
+Good job on getting the camera and text overlay to work!
