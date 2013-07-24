@@ -17,29 +17,27 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 
 public class CameraActivity extends Activity implements OnClickListener {
 	private CameraPreview mPreview;
 	private Camera mCamera;
 	private static final String TAG = "CameraActivity";
 	protected static final int MEDIA_TYPE_IMAGE = 1;
-	private Button captureButton;
-<<<<<<< HEAD
+	private ImageButton captureButton;
 	
-=======
-	//private static android.hardware.Camera.CameraInfo info = new android.hardware.Camera.CameraInfo();
-
->>>>>>> 697cc07b4540d883f294ffbee167c3df5f8541f1
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+    	this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_camera);
 
 		/** Capture button */
-		captureButton = (Button) findViewById(R.id.button_capture);
+		captureButton = (ImageButton) findViewById(R.id.button_capture);
 		captureButton.setOnClickListener(this);
 
 		// Create an instance of Camera
