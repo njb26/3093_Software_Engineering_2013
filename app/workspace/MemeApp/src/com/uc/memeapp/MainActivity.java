@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ImageButton;
 
 public class MainActivity extends Activity implements OnClickListener {
@@ -17,8 +18,9 @@ public class MainActivity extends Activity implements OnClickListener {
 	/** When class is created*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    	super.onCreate(savedInstanceState);
+    	this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+    	setContentView(R.layout.activity_main);
         
         /**Button on the left, to take a photograph*/
         takeButton = (ImageButton) findViewById(R.id.imgButton_take);

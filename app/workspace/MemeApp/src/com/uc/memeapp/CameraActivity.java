@@ -24,12 +24,10 @@ import android.widget.FrameLayout;
 public class CameraActivity extends Activity implements OnClickListener {
 	private CameraPreview mPreview;
 	private Camera mCamera;
-	//private File mFile; // TODO: REMOVE THIS LATER BAD BAD BAD!
 	private static final String TAG = "CameraActivity";
 	protected static final int MEDIA_TYPE_IMAGE = 1;
 	private Button captureButton;
-	private static android.hardware.Camera.CameraInfo info = new android.hardware.Camera.CameraInfo();
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -169,8 +167,6 @@ public class CameraActivity extends Activity implements OnClickListener {
 		switch (v.getId()) {
 		case (R.id.button_capture):
 			mCamera.takePicture(null, null, mPicture);
-			// new MediaScanner(this, mFile);
-			Log.d(TAG, ":: Inside button_capture");
 		}
 
 	}

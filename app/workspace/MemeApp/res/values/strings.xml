@@ -26,5 +26,6 @@
     <string name="camera_string">Camera under development.</string>
     <string name="title_activity_stock">StockActivity</string>
     <string name="stock_image">Stock Image</string>
+    <string name="capture">Capture!</string>
 
 </resources>
