@@ -9,6 +9,7 @@
 
     <intent-filter>
         <action android:name="android.intent.action.MEDIA_MOUNTED" />
+
         <data android:scheme="file" />
     </intent-filter>
 
@@ -60,6 +61,10 @@
         <activity
             android:name="com.uc.memeapp.StockActivity"
             android:label="@string/title_activity_stock" >
+        </activity>
+        <activity
+            android:name="com.uc.memeapp.TestActivity"
+            android:label="@string/title_activity_test" >
         </activity>
     </application>
 
