@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
@@ -66,14 +67,15 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		} else if (caller.equals("camera")) {
 			String receivedPath = getIntent().getStringExtra("path");
 			Uri receivedUri = Uri.parse(receivedPath);
-			displayImage.setImageURI(receivedUri);
+			//displayImage.setImageURI(receivedUri);
 
+			Bitmap bmpImage = BitmapFactory.decodeFile(receivedUri.getPath());
 			Matrix matrix = new Matrix();
-			displayImage.setScaleType(ScaleType.MATRIX); // required
-			matrix.postRotate((float) 90, displayImage.getDrawable()
-					.getBounds().width() / 2, displayImage.getDrawable()
-					.getBounds().height() / 2);
-			displayImage.setImageMatrix(matrix);
+			matrix.postRotate(270);
+			Bitmap rotateImage = Bitmap.createBitmap(bmpImage,
+					0,0,bmpImage.getWidth(), bmpImage.getHeight(),
+					matrix, true);
+			displayImage.setImageBitmap(rotateImage);
 		}
 
 		// create buttons, set onclicklisteners
