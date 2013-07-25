@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:scaleType="fitCenter"
-                android:src="@drawable/gallery_image" />
+                android:background="@drawable/gallery_button_selector" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:contentDescription="@string/stock"
                 android:scaleType="fitCenter"
-                android:src="@drawable/stock_photo" />
+                android:background="@drawable/stock_photo_button_selector" />
 
             <TextView
                 android:layout_width="wrap_content"

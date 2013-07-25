@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
@@ -21,6 +22,7 @@ public class StockActivity extends Activity {
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        // Auto-generated method stub
+		 	this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 	        super.onCreate(savedInstanceState);
 	        setContentView(R.layout.activity_stock);
 	        GridView gridview = (GridView) findViewById(R.id.gridview);
