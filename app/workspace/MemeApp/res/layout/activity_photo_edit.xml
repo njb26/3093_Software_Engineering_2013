@@ -47,7 +47,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:background="@drawable/save_button"
+            android:background="@drawable/save_button_selector"
             android:contentDescription="@string/save_button_description"
             android:scaleType="fitCenter" />
 
@@ -56,7 +56,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:background="@drawable/upload_button"
+            android:background="@drawable/upload_button_selector"
             android:contentDescription="@string/upload_button_description"
             android:scaleType="fitCenter" />
     </LinearLayout>
@@ -65,7 +65,7 @@
         android:id="@+id/imgButton_delete"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:background="@drawable/delete_button"
+        android:background="@drawable/delete_button_selector"
         android:contentDescription="@string/delete_button_description"
         android:scaleType="fitCenter" />
 

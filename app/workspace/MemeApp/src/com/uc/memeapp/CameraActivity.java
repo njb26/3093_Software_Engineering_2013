@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
@@ -28,6 +29,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 	private static final String TAG = "CameraActivity";
 	protected static final int MEDIA_TYPE_IMAGE = 1;
 	private ImageButton captureButton;
+	static String imgPath="";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,8 @@ public class CameraActivity extends Activity implements OnClickListener {
 		if (type == MEDIA_TYPE_IMAGE) {
 			mediaFile = new File(mediaStorageDir.getPath() + File.separator
 					+ "IMG_" + timeStamp + ".jpg");
+		Log.d("FilePath", mediaFile.getAbsolutePath());
+		imgPath = mediaFile.getAbsolutePath();
 		} else {
 			return null;
 		}
@@ -117,7 +121,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 						"Error creating media file, check storage permissions: ");
 				return;
 			}
-			galleryAddPic(pictureFile);
+			galleryAddPic(pictureFile); //Very important that it is done here!
 			try {
 				FileOutputStream fos = new FileOutputStream(pictureFile);
 				fos.write(data);
@@ -157,7 +161,6 @@ public class CameraActivity extends Activity implements OnClickListener {
 	}
 
 	public void galleryAddPic(File file) {
-		
 		Uri contentUri = Uri.fromFile(file);
 		Intent mediaScanIntent = new Intent(
 				Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, contentUri);
