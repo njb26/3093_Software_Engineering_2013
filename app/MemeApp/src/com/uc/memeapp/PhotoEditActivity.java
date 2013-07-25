@@ -9,12 +9,17 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class PhotoEditActivity extends Activity {
+public class PhotoEditActivity extends Activity implements OnClickListener {
 	public int topMaxLines = 3;
 	public int bottomMaxLines = 3;
+	public EditText topEditText;
+	public EditText bottomEditText;
 	/**
 	 * -Sets the layout to be the one defined in the activity_photo_edit.xml file
 	 * -Depending on which activity called it, Stock or Gallery, loads a photo
@@ -40,26 +45,29 @@ public class PhotoEditActivity extends Activity {
 			int index = bdl.getInt("Index");
 			displayImage.setImageResource(ImageAdapter.mThumbIds[index]);
 		}
-		//if GalleryActivity
-		else if(caller.equals("Gallery")){
+		//if GalleryActivity or if camera activity
+		else if(caller.equals("Gallery") || caller.equals("camera")){
 			//Uri of image is passed as a string, parses the string and loads it as a Uri
 			 String receivedPath = getIntent().getStringExtra("path");
 			 Uri receivedUri = Uri.parse(receivedPath);
 			 displayImage.setImageURI(receivedUri);
 		}
 		
-			EditText topEditText= (EditText) findViewById(R.id.topInputText);
-			EditText bottomEditText= (EditText) findViewById(R.id.bottomInputText);
+			ImageButton deleteButton = (ImageButton) findViewById(R.id.imgButton_delete);
+			deleteButton.setOnClickListener(this);
 			
+			//Create the two editText objects
+			topEditText= (EditText) findViewById(R.id.topInputText);
+			bottomEditText= (EditText) findViewById(R.id.bottomInputText);
+			
+			//cant scroll right, number of lines, and font size set
 			topEditText.setHorizontallyScrolling(false);
 			topEditText.setMaxLines(topMaxLines);
 			topEditText.setTextSize(25);
-			//topEditText.setInputType(0x00001001);
 			
 			bottomEditText.setMaxLines(bottomMaxLines);
 			bottomEditText.setHorizontallyScrolling(false);			
 			bottomEditText.setTextSize(25);
-			//bottomEditText.setInputType(0x00001001);
 		
 			topEditText.addTextChangedListener(new TextWatcher() {
 				
@@ -72,7 +80,9 @@ public class PhotoEditActivity extends Activity {
             public void beforeTextChanged(CharSequence s, int start, int count,
                     int after) {}
 
-            @Override
+            //if font goes past max lines, decrement font and increase number of lines
+            //more lines of text at a smaller size now allowed to be typed in
+            @Override      
             public void afterTextChanged(Editable s) {
             	int currLineCount = topEditText.getLineCount();
             	if(currLineCount > topMaxLines){
@@ -84,7 +94,7 @@ public class PhotoEditActivity extends Activity {
 
             }
         });
-			
+			//same as for the top EditText
 			bottomEditText.addTextChangedListener(new TextWatcher() {
 				
 				EditText bottomEditText= (EditText) findViewById(R.id.bottomInputText);
@@ -108,6 +118,14 @@ public class PhotoEditActivity extends Activity {
             }
         });
 
+	}
+	public void onClick(View v) {
+		switch(v.getId()){
+		case(R.id.imgButton_delete):{
+			topEditText.setText("");
+			bottomEditText.setText("");
+		}
+		}
 	}
 
 	@Override

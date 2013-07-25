@@ -17,9 +17,8 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
@@ -29,6 +28,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 	private static final String TAG = "CameraActivity";
 	protected static final int MEDIA_TYPE_IMAGE = 1;
 	private ImageButton captureButton;
+	public static String imagePath= "";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +102,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 		} else {
 			return null;
 		}
-
+		imagePath = mediaFile.getAbsolutePath();
 		return mediaFile;
 	}
 
@@ -128,7 +128,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 				Log.d(TAG, "File not found: " + e.getMessage());
 			} catch (IOException e) {
 				Log.d(TAG, "Error accessing file: " + e.getMessage());
-			}
+			}	
 		}
 	};
 
@@ -163,15 +163,24 @@ public class CameraActivity extends Activity implements OnClickListener {
 		Intent mediaScanIntent = new Intent(
 				Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, contentUri);
 		sendBroadcast(mediaScanIntent);
+		launchPhotoEdit(contentUri);
 	}
 
+	public void launchPhotoEdit(Uri content){
+		Intent mInDisplay=new Intent(CameraActivity.this, PhotoEditActivity.class);
+		mInDisplay.putExtra("caller", "camera");
+		mInDisplay.putExtra("path", content.toString());
+        startActivity(mInDisplay);
+	}
+	
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case (R.id.button_capture):
 			mCamera.takePicture(null, null, mPicture);
-		}
+			}
 
 	}
+	
 
 }
