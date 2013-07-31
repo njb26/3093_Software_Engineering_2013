@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,7 +23,6 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ImageView.ScaleType;
 
 public class PhotoEditActivity extends Activity implements OnClickListener {
 	public int topMaxLines = 3;
@@ -96,10 +96,12 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		topEditText.setHorizontallyScrolling(false);
 		topEditText.setMaxLines(topMaxLines);
 		topEditText.setTextSize(25);
+		topEditText.setBackgroundColor(Color.LTGRAY);
 
 		bottomEditText.setMaxLines(bottomMaxLines);
 		bottomEditText.setHorizontallyScrolling(false);
 		bottomEditText.setTextSize(25);
+		bottomEditText.setBackgroundColor(Color.LTGRAY);
 
 		topEditText.addTextChangedListener(new TextWatcher() {
 
@@ -166,6 +168,12 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			bottomEditText.setText("");
 		}
 		case (R.id.imgButton_save): {
+			//disables visibility of cursor before it saves
+			topEditText.setCursorVisible(false);
+			bottomEditText.setCursorVisible(false);
+			topEditText.setBackgroundColor(0);
+			bottomEditText.setBackgroundColor(0);
+
 			// turns framelayout containgint edittexts ad imageview into a
 			// bitmap
 			// sends the bitmap to a new activity as proof that it is created
@@ -179,7 +187,12 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 					TestActivity.class);
 			mInDisplay.putExtra("testtest", byteArray);
 			startActivity(mInDisplay);
-
+			
+			//enables cursor visibility for user
+			topEditText.setCursorVisible(true);
+			bottomEditText.setCursorVisible(true);
+			topEditText.setBackgroundColor(Color.LTGRAY);
+			bottomEditText.setBackgroundColor(Color.LTGRAY);
 		}
 		}
 	}

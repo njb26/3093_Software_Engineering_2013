@@ -144,7 +144,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 		releaseCamera(); // release the camera immediately on pause event
 	}
 
-	private void releaseCamera() {
+	public void releaseCamera() {
 		if (mCamera != null) {
 			mCamera.release(); // release the camera for other applications
 			mCamera = null;

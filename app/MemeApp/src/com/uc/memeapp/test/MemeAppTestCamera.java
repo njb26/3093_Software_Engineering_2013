@@ -22,9 +22,9 @@ public class MemeAppTestCamera extends
 		mActivity = getActivity();
 	}
 
-	/*public void testCameraLoaded(){
-		assertNotNull();
-	}*/
+//public void testCameraLoaded(){
+	//	assertNotNull();
+//	}
 	
 	public void testCameraOrientation() {
 		assertTrue(info.orientation == 0);
@@ -34,4 +34,14 @@ public class MemeAppTestCamera extends
 			e.printStackTrace();
 		}
 	}
+	
+	
+	public void testCameraReleased(){
+		
+		Camera mCamera = mActivity.getCameraInstance();
+		mActivity.releaseCamera();
+		assertNull(mCamera);		
+		
+	}
+	
 }

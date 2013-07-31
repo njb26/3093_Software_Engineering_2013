@@ -35,7 +35,8 @@
                 android:inputType="textCapCharacters"
                 android:scrollHorizontally="false"
                 android:singleLine="false"
-                android:gravity="center_horizontal" >
+                android:gravity="center_horizontal"
+                android:background="@android:color/transparent" >
             </EditText>
 
             <EditText
@@ -46,7 +47,8 @@
                 android:inputType="textCapCharacters"
                 android:scrollHorizontally="false"
                 android:singleLine="false"
-                android:gravity="center_horizontal" >
+                android:gravity="center_horizontal"
+                android:background="@android:color/transparent" >
             </EditText>
         </FrameLayout>
     </LinearLayout>

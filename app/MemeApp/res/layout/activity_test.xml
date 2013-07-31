@@ -2,17 +2,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation = "vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TestActivity" >
 
-     <ImageView
-                android:id="@+id/test"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter" />
+    <ImageView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+    <Button
+        android:id="@+id/post_Button"
+        android:layout_below="@id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_below="@id/post_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text to tweet:" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_below="@id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:text="Test tweet text" >
+
+        
+    </EditText>
+
+
+    <TextView
+         android:id="@+id/textview2"
+        android:layout_below="@id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results:" />
+
+    <TextView
+        android:id="@+id/resultsTextView"
+        android:layout_below="@id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
 </RelativeLayout>

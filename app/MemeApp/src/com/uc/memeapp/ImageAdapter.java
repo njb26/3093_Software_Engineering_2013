@@ -58,9 +58,9 @@ public class ImageAdapter extends BaseAdapter {
 	public static Integer[] mThumbIds = {
             R.drawable.all_the_things, R.drawable.asian_dad, R.drawable.bad_advice_cat,
             R.drawable.brace_yourself, R.drawable.business_cat, R.drawable.condescending_wonka,
-            R.drawable.conspiracy_keanu, R.drawable.dwight_schrute, R.drawable.first_world_problems,
-            R.drawable.good_guy_greg, R.drawable.hipster_kitty, R.drawable.lazy_senior,
-            R.drawable.most_interesting_cat, R.drawable.most_interesting_man, R.drawable.one_does_not_simply, 
+            R.drawable.conspiracy_keanu, R.drawable.dwight_schrute, R.drawable.first_world_problems
+           /* R.drawable.good_guy_greg, R.drawable.hipster_kitty, R.drawable.lazy_senior,
+           /* R.drawable.most_interesting_cat, R.drawable.most_interesting_man, R.drawable.one_does_not_simply, 
             R.drawable.pedobear, R.drawable.philosoraptor, R.drawable.scumbag_steve
            /* R.drawable.skeptical_fry, R.drawable.socially_awesome_penguin, R.drawable.socially_awkward_penguin,
             R.drawable.success_kid, R.drawable.successful_black_man, R.drawable.ten_guy,

@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.net.Uri"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
-<fullyQualifiedTypeName name="com.uc.memeapp.R.id"/>
-<fullyQualifiedTypeName name="android.view.ViewGroup.LayoutParams"/>
-<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
-<fullyQualifiedTypeName name="android.graphics.Matrix"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>
