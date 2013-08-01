@@ -172,40 +172,16 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 	}
 
 	public void onClick(View v) {
-		byte[] byteArray = null;
+
 		switch (v.getId()) {
 		// wipes text off of the image
 		case (R.id.imgButton_delete): {
 			topEditText.setText("");
 			bottomEditText.setText("");
 		}
-		case (R.id.imgButton_post | R.id.imgButton_save): {
-			// disables visibility of cursor before it saves
-			topEditText.setCursorVisible(false);
-			bottomEditText.setCursorVisible(false);
-			topEditText.setBackgroundColor(0);
-			bottomEditText.setBackgroundColor(0);
-
-			// turns framelayout containgint edittexts ad imageview into a
-			// bitmap
-			// sends the bitmap to a new activity as proof that it is created
-			Bitmap imageToSave = fLayout.getDrawingCache();
-			ByteArrayOutputStream stream = new ByteArrayOutputStream();
-			imageToSave.compress(Bitmap.CompressFormat.PNG, 100, stream);
-			byteArray = stream.toByteArray();
-			// ImageView displayImage = (ImageView)
-			// findViewById(R.id.image_to_edit);
-
-			// enables cursor visibility for user
-			topEditText.setCursorVisible(true);
-			bottomEditText.setCursorVisible(true);
-			topEditText.setBackgroundColor(Color.LTGRAY);
-			bottomEditText.setBackgroundColor(Color.LTGRAY);
-		}
-		}
-		switch (v.getId()) {
+		// get the image in a byte[]
 		case (R.id.imgButton_save): {
-
+			byte[] bArray = capturePic();
 			// save the image
 			File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
 			if (pictureFile == null) {
@@ -216,7 +192,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			galleryAddPic(pictureFile);
 			try {
 				FileOutputStream fos = new FileOutputStream(pictureFile);
-				fos.write(byteArray);
+				fos.write(bArray);
 				fos.close();
 
 			} catch (FileNotFoundException e) {
@@ -226,14 +202,43 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			}
 			Toast.makeText(this, "Image saved!", Toast.LENGTH_SHORT);
 			break;
+
 		}
 		case (R.id.imgButton_post): {
+			byte[] bArray = capturePic();
 			Intent mInDisplay = new Intent(PhotoEditActivity.this,
 					TestActivity.class);
-			mInDisplay.putExtra("testtest", byteArray);
+			mInDisplay.putExtra("testtest", bArray);
 			startActivity(mInDisplay);
 		}
+
 		}
+	}
+
+	public byte[] capturePic() {
+		// disables visibility of cursor before it saves
+		topEditText.setCursorVisible(false);
+		bottomEditText.setCursorVisible(false);
+		topEditText.setBackgroundColor(0);
+		bottomEditText.setBackgroundColor(0);
+
+		// turns framelayout containgint edittexts ad imageview into a
+		// bitmap
+		// sends the bitmap to a new activity as proof that it is created
+		Bitmap imageToSave = fLayout.getDrawingCache();
+		ByteArrayOutputStream stream = new ByteArrayOutputStream();
+		imageToSave.compress(Bitmap.CompressFormat.PNG, 100, stream);
+		byte[] byteArray = stream.toByteArray();
+		// ImageView displayImage = (ImageView)
+		// findViewById(R.id.image_to_edit);
+
+		// enables cursor visibility for user
+		topEditText.setCursorVisible(true);
+		bottomEditText.setCursorVisible(true);
+		topEditText.setBackgroundColor(Color.LTGRAY);
+		bottomEditText.setBackgroundColor(Color.LTGRAY);
+
+		return byteArray;
 	}
 
 	public void galleryAddPic(File file) {
