@@ -92,6 +92,8 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		// create buttons, set onclicklisteners
 		ImageButton deleteButton = (ImageButton) findViewById(R.id.imgButton_delete);
 		ImageButton saveButton = (ImageButton) findViewById(R.id.imgButton_save);
+		ImageButton postButton = (ImageButton) findViewById(R.id.imgButton_post);
+		postButton.setOnClickListener(this);
 		deleteButton.setOnClickListener(this);
 		saveButton.setOnClickListener(this);
 
@@ -171,6 +173,28 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 
 	}
 
+	public String savePicture(byte[] bArray) {
+		File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
+		if (pictureFile == null) {
+			Log.d(PhotoEditActivity.TAG,
+					"Error creating media file, check storage permissions: ");
+			return "";
+		}
+		galleryAddPic(pictureFile);
+		try {
+			FileOutputStream fos = new FileOutputStream(pictureFile);
+			fos.write(bArray);
+			fos.close();
+
+		} catch (FileNotFoundException e) {
+			Log.d(TAG, "File not found: " + e.getMessage());
+		} catch (IOException e) {
+			Log.d(TAG, "Error accessing file: " + e.getMessage());
+		}
+		Toast.makeText(this, "Image saved!", Toast.LENGTH_SHORT).show();
+		return pictureFile.getAbsolutePath();
+	}
+
 	public void onClick(View v) {
 
 		switch (v.getId()) {
@@ -183,24 +207,20 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		case (R.id.imgButton_save): {
 			byte[] bArray = capturePic();
 			// save the image
-			File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
-			if (pictureFile == null) {
-				Log.d(PhotoEditActivity.TAG,
-						"Error creating media file, check storage permissions: ");
-				return;
-			}
-			galleryAddPic(pictureFile);
-			try {
-				FileOutputStream fos = new FileOutputStream(pictureFile);
-				fos.write(bArray);
-				fos.close();
-
-			} catch (FileNotFoundException e) {
-				Log.d(TAG, "File not found: " + e.getMessage());
-			} catch (IOException e) {
-				Log.d(TAG, "Error accessing file: " + e.getMessage());
-			}
-			Toast.makeText(this, "Image saved!", Toast.LENGTH_SHORT);
+			/*
+			 * File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE); if
+			 * (pictureFile == null) { Log.d(PhotoEditActivity.TAG,
+			 * "Error creating media file, check storage permissions: ");
+			 * return; } galleryAddPic(pictureFile); try { FileOutputStream fos
+			 * = new FileOutputStream(pictureFile); fos.write(bArray);
+			 * fos.close();
+			 * 
+			 * } catch (FileNotFoundException e) { Log.d(TAG, "File not found: "
+			 * + e.getMessage()); } catch (IOException e) { Log.d(TAG,
+			 * "Error accessing file: " + e.getMessage()); }
+			 * Toast.makeText(this, "Image saved!", Toast.LENGTH_SHORT).show();
+			 */
+			savePicture(bArray);
 			break;
 
 		}
@@ -209,6 +229,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			Intent mInDisplay = new Intent(PhotoEditActivity.this,
 					TestActivity.class);
 			mInDisplay.putExtra("testtest", bArray);
+			mInDisplay.putExtra("Path", savePicture(bArray));
 			startActivity(mInDisplay);
 		}
 
