@@ -1,5 +1,6 @@
 package com.uc.memeapp;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,6 +10,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,7 +36,8 @@ public class TestActivity extends Activity  {
     private CheckBox mTwitterBtn;
     private String username = "";
     private boolean postToTwitter = false;
-    private Bitmap imageToTweet; 
+    private Bitmap imageToTweet;
+   
  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -85,8 +89,7 @@ public class TestActivity extends Activity  {
 	    // get text from layout control
 	    //EditText tweetEditText = (EditText) findViewById(R.id.editText1);
 	    String textToTweet = "TEST";
-	    // get image from resource
-	    //Bitmap imageToTweet = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+	    
 	    // use MSTwitter function to save image to file because startTweet() takes an image path
 	    // this is done to avoid passing large image files between intents which is not android best practices 
 	    String tweetImagePath = MSTwitter.putBitmapInDiskCache(this, imageToTweet);

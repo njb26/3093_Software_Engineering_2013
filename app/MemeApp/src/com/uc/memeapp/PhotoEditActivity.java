@@ -4,6 +4,12 @@
 package com.uc.memeapp;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,8 +19,10 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -30,6 +38,9 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 	public EditText topEditText;
 	public EditText bottomEditText;
 	public FrameLayout fLayout;
+	private static final String TAG = "PhotoEditActivity";
+	protected static final int MEDIA_TYPE_IMAGE = 1;
+	public static String imagePath = "";
 
 	/**
 	 * -Sets the layout to be the one defined in the activity_photo_edit.xml
@@ -67,14 +78,13 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		} else if (caller.equals("camera")) {
 			String receivedPath = getIntent().getStringExtra("path");
 			Uri receivedUri = Uri.parse(receivedPath);
-			//displayImage.setImageURI(receivedUri);
+			// displayImage.setImageURI(receivedUri);
 
 			Bitmap bmpImage = BitmapFactory.decodeFile(receivedUri.getPath());
 			Matrix matrix = new Matrix();
 			matrix.postRotate(270);
-			Bitmap rotateImage = Bitmap.createBitmap(bmpImage,
-					0,0,bmpImage.getWidth(), bmpImage.getHeight(),
-					matrix, true);
+			Bitmap rotateImage = Bitmap.createBitmap(bmpImage, 0, 0,
+					bmpImage.getWidth(), bmpImage.getHeight(), matrix, true);
 			displayImage.setImageBitmap(rotateImage);
 		}
 
@@ -167,7 +177,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			topEditText.setText("");
 			bottomEditText.setText("");
 		}
-		case (R.id.imgButton_save): {
+		case (R.id.imgButton_post): {
 			//disables visibility of cursor before it saves
 			topEditText.setCursorVisible(false);
 			bottomEditText.setCursorVisible(false);
@@ -194,7 +204,75 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			topEditText.setBackgroundColor(Color.LTGRAY);
 			bottomEditText.setBackgroundColor(Color.LTGRAY);
 		}
+		case(R.id.imgButton_save):{
+			Bitmap imageToSave = fLayout.getDrawingCache();
+			ByteArrayOutputStream stream = new ByteArrayOutputStream();
+			imageToSave.compress(Bitmap.CompressFormat.PNG, 100, stream);
+			byte[] byteArray = stream.toByteArray();
+			
+			//save the image
+			File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
+			if (pictureFile == null) {
+				Log.d(PhotoEditActivity.TAG,
+						"Error creating media file, check storage permissions: ");
+				return;
+			}
+			galleryAddPic(pictureFile);
+			try {
+				FileOutputStream fos = new FileOutputStream(pictureFile);
+				fos.write(byteArray);
+				fos.close();
+				
+			} catch (FileNotFoundException e) {
+				Log.d(TAG, "File not found: " + e.getMessage());
+			} catch (IOException e) {
+				Log.d(TAG, "Error accessing file: " + e.getMessage());
+			}	
 		}
+		}
+	}
+
+	public void galleryAddPic(File file) {
+
+		Uri contentUri = Uri.fromFile(file);
+		Intent mediaScanIntent = new Intent(
+				Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, contentUri);
+		sendBroadcast(mediaScanIntent);
+		
+	}
+
+	/** Create a File for saving a new picture */
+	private static File getOutputMediaFile(int type) {
+		Log.d(TAG, Environment.getExternalStorageState());
+
+		File mediaStorageDir = new File(
+				Environment
+						.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+				"InstaMeme");
+
+		// This location works best if you want the created images to be shared
+		// between applications and persist after your app has been uninstalled.
+
+		/** Errs if storage directory does not exist */
+		if (!mediaStorageDir.exists()) {
+			if (!mediaStorageDir.mkdirs()) {
+				Log.d("InstaMeme", "failed to create directory");
+				return null;
+			}
+		}
+
+		// Create a media file name
+		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss")
+				.format(new Date());
+		File mediaFile;
+		if (type == MEDIA_TYPE_IMAGE) {
+			mediaFile = new File(mediaStorageDir.getPath() + File.separator
+					+ "EDITED_IMG_" + timeStamp + ".jpg");
+		} else {
+			return null;
+		}
+		imagePath = mediaFile.getAbsolutePath();
+		return mediaFile;
 	}
 
 	@Override
