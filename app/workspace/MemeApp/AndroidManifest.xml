@@ -6,9 +6,13 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+	<uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.mindspiker.mstwitter.MSTwitterService" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    
     <intent-filter>
         <action android:name="android.intent.action.MEDIA_MOUNTED" />
+
         <data android:scheme="file" />
     </intent-filter>
 
@@ -61,6 +65,16 @@
             android:name="com.uc.memeapp.StockActivity"
             android:label="@string/title_activity_stock" >
         </activity>
+        <activity
+            android:name="com.uc.memeapp.TestActivity"
+            android:label="@string/title_activity_test" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mindspiker.mstwitter.MSTwitterAuthorizer" />
+        <service android:name="com.mindspiker.mstwitter.MSTwitterService" />
     </application>
 
 </manifest>

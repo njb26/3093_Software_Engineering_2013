@@ -16,12 +16,13 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter" />
 
-    <Button
+    <ImageButton
         android:id="@+id/post_Button"
         android:layout_below="@id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Post" />
+        android:background="@drawable/twitter_icon"
+         />
 
     <TextView
         android:id="@+id/textview"

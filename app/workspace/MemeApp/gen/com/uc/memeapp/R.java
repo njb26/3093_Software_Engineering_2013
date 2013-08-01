@@ -73,31 +73,40 @@ public final class R {
         public static final int success_kid=0x7f02002d;
         public static final int successful_black_man=0x7f02002e;
         public static final int ten_guy=0x7f02002f;
-        public static final int upload_button=0x7f020030;
-        public static final int upload_button_clicked=0x7f020031;
-        public static final int upload_button_selector=0x7f020032;
-        public static final int why_not_zoidberg=0x7f020033;
-        public static final int y_u_no=0x7f020034;
-        public static final int yo_dawg=0x7f020035;
+        public static final int twitter_icon=0x7f020030;
+        public static final int upload_button=0x7f020031;
+        public static final int upload_button_clicked=0x7f020032;
+        public static final int upload_button_selector=0x7f020033;
+        public static final int why_not_zoidberg=0x7f020034;
+        public static final int y_u_no=0x7f020035;
+        public static final int yo_dawg=0x7f020036;
     }
     public static final class id {
         public static final int accept_image=0x7f090003;
-        public static final int action_settings=0x7f090010;
+        public static final int action_settings=0x7f090018;
+        public static final int bottomInputText=0x7f09000a;
         public static final int button_capture=0x7f090001;
         public static final int camera_preview=0x7f090000;
+        public static final int editPhoto=0x7f090007;
+        public static final int editText1=0x7f090015;
         public static final int get_new_image=0x7f090004;
-        public static final int gridview=0x7f09000f;
-        public static final int image_to_edit=0x7f090007;
-        public static final int imgButton_delete=0x7f09000c;
-        public static final int imgButton_gallery=0x7f09000d;
+        public static final int gridview=0x7f090011;
+        public static final int image_to_edit=0x7f090008;
+        public static final int imgButton_delete=0x7f09000e;
+        public static final int imgButton_gallery=0x7f09000f;
         public static final int imgButton_grab=0x7f090006;
-        public static final int imgButton_post=0x7f09000b;
-        public static final int imgButton_save=0x7f09000a;
-        public static final int imgButton_stock=0x7f09000e;
+        public static final int imgButton_post=0x7f09000d;
+        public static final int imgButton_save=0x7f09000c;
+        public static final int imgButton_stock=0x7f090010;
         public static final int imgButton_take=0x7f090005;
-        public static final int save_upload_buttons=0x7f090009;
+        public static final int post_Button=0x7f090013;
+        public static final int resultsTextView=0x7f090017;
+        public static final int save_upload_buttons=0x7f09000b;
         public static final int targetimage=0x7f090002;
-        public static final int topInputText=0x7f090008;
+        public static final int test=0x7f090012;
+        public static final int textview=0x7f090014;
+        public static final int textview2=0x7f090016;
+        public static final int topInputText=0x7f090009;
     }
     public static final class layout {
         public static final int activity_camera=0x7f030000;
@@ -106,6 +115,7 @@ public final class R {
         public static final int activity_photo_edit=0x7f030003;
         public static final int activity_selection=0x7f030004;
         public static final int activity_stock=0x7f030005;
+        public static final int activity_test=0x7f030006;
     }
     public static final class menu {
         public static final int camera=0x7f080000;
@@ -114,6 +124,7 @@ public final class R {
         public static final int photo_edit=0x7f080003;
         public static final int selection=0x7f080004;
         public static final int stock=0x7f080005;
+        public static final int test=0x7f080006;
     }
     public static final class string {
         public static final int accept=0x7f060009;
@@ -140,6 +151,7 @@ public final class R {
         public static final int title_activity_photo_edit=0x7f060010;
         public static final int title_activity_selection=0x7f060002;
         public static final int title_activity_stock=0x7f060017;
+        public static final int title_activity_test=0x7f06001a;
         public static final int upload_button_description=0x7f060013;
         public static final int wrong_photo=0x7f060015;
     }

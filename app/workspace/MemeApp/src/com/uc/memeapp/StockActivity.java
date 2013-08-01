@@ -22,9 +22,8 @@ public class StockActivity extends Activity {
 	 @Override
 	    protected void onCreate(Bundle savedInstanceState) {
 	        // Auto-generated method stub
+		 	this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 	        super.onCreate(savedInstanceState);
-	        //Get rid of title bar
-	        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 	        setContentView(R.layout.activity_stock);
 	        GridView gridview = (GridView) findViewById(R.id.gridview);
 	        gridview.setAdapter(new ImageAdapter(this));

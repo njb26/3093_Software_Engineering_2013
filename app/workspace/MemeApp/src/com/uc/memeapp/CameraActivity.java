@@ -17,9 +17,8 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
@@ -29,7 +28,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 	private static final String TAG = "CameraActivity";
 	protected static final int MEDIA_TYPE_IMAGE = 1;
 	private ImageButton captureButton;
-	static String imgPath="";
+	public static String imagePath= "";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -100,12 +99,10 @@ public class CameraActivity extends Activity implements OnClickListener {
 		if (type == MEDIA_TYPE_IMAGE) {
 			mediaFile = new File(mediaStorageDir.getPath() + File.separator
 					+ "IMG_" + timeStamp + ".jpg");
-		Log.d("FilePath", mediaFile.getAbsolutePath());
-		imgPath = mediaFile.getAbsolutePath();
 		} else {
 			return null;
 		}
-
+		imagePath = mediaFile.getAbsolutePath();
 		return mediaFile;
 	}
 
@@ -121,7 +118,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 						"Error creating media file, check storage permissions: ");
 				return;
 			}
-			galleryAddPic(pictureFile); //Very important that it is done here!
+			galleryAddPic(pictureFile);
 			try {
 				FileOutputStream fos = new FileOutputStream(pictureFile);
 				fos.write(data);
@@ -131,7 +128,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 				Log.d(TAG, "File not found: " + e.getMessage());
 			} catch (IOException e) {
 				Log.d(TAG, "Error accessing file: " + e.getMessage());
-			}
+			}	
 		}
 	};
 
@@ -147,7 +144,7 @@ public class CameraActivity extends Activity implements OnClickListener {
 		releaseCamera(); // release the camera immediately on pause event
 	}
 
-	private void releaseCamera() {
+	public void releaseCamera() {
 		if (mCamera != null) {
 			mCamera.release(); // release the camera for other applications
 			mCamera = null;
@@ -161,19 +158,29 @@ public class CameraActivity extends Activity implements OnClickListener {
 	}
 
 	public void galleryAddPic(File file) {
+		
 		Uri contentUri = Uri.fromFile(file);
 		Intent mediaScanIntent = new Intent(
 				Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, contentUri);
 		sendBroadcast(mediaScanIntent);
+		launchPhotoEdit(contentUri);
 	}
 
+	public void launchPhotoEdit(Uri content){
+		Intent mInDisplay=new Intent(CameraActivity.this, PhotoEditActivity.class);
+		mInDisplay.putExtra("caller", "camera");
+		mInDisplay.putExtra("path", content.toString());
+        startActivity(mInDisplay);
+	}
+	
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case (R.id.button_capture):
 			mCamera.takePicture(null, null, mPicture);
-		}
+			}
 
 	}
+	
 
 }
