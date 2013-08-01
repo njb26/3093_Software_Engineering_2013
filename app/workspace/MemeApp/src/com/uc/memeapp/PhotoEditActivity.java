@@ -171,14 +171,15 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 	}
 
 	public void onClick(View v) {
+		byte[] byteArray = null;
 		switch (v.getId()) {
 		// wipes text off of the image
 		case (R.id.imgButton_delete): {
 			topEditText.setText("");
 			bottomEditText.setText("");
 		}
-		case (R.id.imgButton_post): {
-			//disables visibility of cursor before it saves
+		case (R.id.imgButton_post | R.id.imgButton_save): {
+			// disables visibility of cursor before it saves
 			topEditText.setCursorVisible(false);
 			bottomEditText.setCursorVisible(false);
 			topEditText.setBackgroundColor(0);
@@ -190,27 +191,21 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			Bitmap imageToSave = fLayout.getDrawingCache();
 			ByteArrayOutputStream stream = new ByteArrayOutputStream();
 			imageToSave.compress(Bitmap.CompressFormat.PNG, 100, stream);
-			byte[] byteArray = stream.toByteArray();
+			byteArray = stream.toByteArray();
 			// ImageView displayImage = (ImageView)
 			// findViewById(R.id.image_to_edit);
-			Intent mInDisplay = new Intent(PhotoEditActivity.this,
-					TestActivity.class);
-			mInDisplay.putExtra("testtest", byteArray);
-			startActivity(mInDisplay);
-			
-			//enables cursor visibility for user
+
+			// enables cursor visibility for user
 			topEditText.setCursorVisible(true);
 			bottomEditText.setCursorVisible(true);
 			topEditText.setBackgroundColor(Color.LTGRAY);
 			bottomEditText.setBackgroundColor(Color.LTGRAY);
 		}
-		case(R.id.imgButton_save):{
-			Bitmap imageToSave = fLayout.getDrawingCache();
-			ByteArrayOutputStream stream = new ByteArrayOutputStream();
-			imageToSave.compress(Bitmap.CompressFormat.PNG, 100, stream);
-			byte[] byteArray = stream.toByteArray();
-			
-			//save the image
+		}
+		switch (v.getId()) {
+		case (R.id.imgButton_save): {
+
+			// save the image
 			File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
 			if (pictureFile == null) {
 				Log.d(PhotoEditActivity.TAG,
@@ -222,12 +217,19 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 				FileOutputStream fos = new FileOutputStream(pictureFile);
 				fos.write(byteArray);
 				fos.close();
-				
+
 			} catch (FileNotFoundException e) {
 				Log.d(TAG, "File not found: " + e.getMessage());
 			} catch (IOException e) {
 				Log.d(TAG, "Error accessing file: " + e.getMessage());
-			}	
+			}
+			break;
+		}
+		case (R.id.imgButton_post): {
+			Intent mInDisplay = new Intent(PhotoEditActivity.this,
+					TestActivity.class);
+			mInDisplay.putExtra("testtest", byteArray);
+			startActivity(mInDisplay);
 		}
 		}
 	}
@@ -238,7 +240,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		Intent mediaScanIntent = new Intent(
 				Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, contentUri);
 		sendBroadcast(mediaScanIntent);
-		
+
 	}
 
 	/** Create a File for saving a new picture */
