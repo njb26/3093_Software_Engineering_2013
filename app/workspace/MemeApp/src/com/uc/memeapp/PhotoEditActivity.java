@@ -31,6 +31,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class PhotoEditActivity extends Activity implements OnClickListener {
 	public int topMaxLines = 3;
@@ -223,6 +224,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			} catch (IOException e) {
 				Log.d(TAG, "Error accessing file: " + e.getMessage());
 			}
+			Toast.makeText(this, "Image saved!", Toast.LENGTH_SHORT);
 			break;
 		}
 		case (R.id.imgButton_post): {
