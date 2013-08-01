@@ -22,9 +22,6 @@ public class MemeAppTestCamera extends
 		mActivity = getActivity();
 	}
 
-//public void testCameraLoaded(){
-	//	assertNotNull();
-//	}
 	
 	public void testCameraOrientation() {
 		assertTrue(info.orientation == 0);

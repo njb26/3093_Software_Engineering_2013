@@ -29,15 +29,16 @@ import com.mindspiker.mstwitter.MSTwitter.MSTwitterResultReceiver;
 public class TestActivity extends Activity implements OnClickListener {
 	private String mImagePath = "";
 	/**
-	 * Consumer Key generated when you registered your app at
+	 * Consumer Key generated when registered app at
 	 * https://dev.twitter.com/apps/
 	 */
 	public static final String CONSUMER_KEY = "gXOzF2ixLR9lfOsj0u0W7Q";
 	/**
-	 * Consumer Secret generated when you registered your app at
+	 * Consumer Secret generated when registered app at
 	 * https://dev.twitter.com/apps/
 	 */
 	public static final String CONSUMER_SECRET = "nNbLXptxNbRtODd48GMyVP19VnmmqKTBe1uNIvxxwU";
+	
 	/** module level variables used in different parts of this module */
 	private static final String TAG = "TestActivity:: ";
 	private MSTwitter mMSTwitter;

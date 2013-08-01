@@ -79,7 +79,6 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		} else if (caller.equals("camera")) {
 			String receivedPath = getIntent().getStringExtra("path");
 			Uri receivedUri = Uri.parse(receivedPath);
-			// displayImage.setImageURI(receivedUri);
 
 			Bitmap bmpImage = BitmapFactory.decodeFile(receivedUri.getPath());
 			Matrix matrix = new Matrix();
@@ -208,20 +207,6 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		// get the image in a byte[]
 		case (R.id.imgButton_save): {
 			byte[] bArray = capturePic();
-			// save the image
-			/*
-			 * File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE); if
-			 * (pictureFile == null) { Log.d(PhotoEditActivity.TAG,
-			 * "Error creating media file, check storage permissions: ");
-			 * return; } galleryAddPic(pictureFile); try { FileOutputStream fos
-			 * = new FileOutputStream(pictureFile); fos.write(bArray);
-			 * fos.close();
-			 * 
-			 * } catch (FileNotFoundException e) { Log.d(TAG, "File not found: "
-			 * + e.getMessage()); } catch (IOException e) { Log.d(TAG,
-			 * "Error accessing file: " + e.getMessage()); }
-			 * Toast.makeText(this, "Image saved!", Toast.LENGTH_SHORT).show();
-			 */
 			savePicture(bArray);
 			break;
 
