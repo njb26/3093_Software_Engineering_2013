@@ -36,7 +36,7 @@
                 android:scrollHorizontally="false"
                 android:singleLine="false"
                 android:gravity="center_horizontal"
-                android:background="@android:color/transparent" >
+                android:alpha=".5">
             </EditText>
 
             <EditText
@@ -48,7 +48,7 @@
                 android:scrollHorizontally="false"
                 android:singleLine="false"
                 android:gravity="center_horizontal"
-                android:background="@android:color/transparent" >
+                android:alpha=".5" >
             </EditText>
         </FrameLayout>
     </LinearLayout>
