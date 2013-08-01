@@ -110,11 +110,13 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		topEditText.setMaxLines(topMaxLines);
 		topEditText.setTextSize(25);
 		topEditText.setBackgroundColor(Color.LTGRAY);
+		topEditText.setMaxWidth(displayImage.getWidth());
 
 		bottomEditText.setMaxLines(bottomMaxLines);
 		bottomEditText.setHorizontallyScrolling(false);
 		bottomEditText.setTextSize(25);
 		bottomEditText.setBackgroundColor(Color.LTGRAY);
+		bottomEditText.setMaxWidth(displayImage.getWidth());
 
 		topEditText.addTextChangedListener(new TextWatcher() {
 
@@ -242,6 +244,8 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		bottomEditText.setCursorVisible(false);
 		topEditText.setBackgroundColor(0);
 		bottomEditText.setBackgroundColor(0);
+		topEditText.setAlpha((float)1);
+		bottomEditText.setAlpha((float)1);
 
 		// turns framelayout containgint edittexts ad imageview into a
 		// bitmap
@@ -258,6 +262,8 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		bottomEditText.setCursorVisible(true);
 		topEditText.setBackgroundColor(Color.LTGRAY);
 		bottomEditText.setBackgroundColor(Color.LTGRAY);
+		topEditText.setAlpha((float).5);
+		bottomEditText.setAlpha((float).5);
 
 		return byteArray;
 	}

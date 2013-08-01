@@ -41,7 +41,6 @@ public class TestActivity extends Activity implements OnClickListener {
 	/** module level variables used in different parts of this module */
 	private static final String TAG = "TestActivity:: ";
 	private MSTwitter mMSTwitter;
-	// private TwitterApp mTwitter;
 	private CheckBox mTwitterBtn;
 	private String username = "";
 	private boolean postToTwitter = false;
@@ -75,6 +74,17 @@ public class TestActivity extends Activity implements OnClickListener {
 				tweet();
 			}
 		});
+		
+		 final EditText tweetEditText = (EditText) findViewById(R.id.editText1);
+		 tweetEditText.setOnClickListener(new OnClickListener(){
+			 @Override
+			 public void onClick(View v){
+				if(v.getId() == R.id.editText1)
+				{
+						tweetEditText.setText("");
+				}
+			 }
+		 });
 
 		// button to go to MainActivity
 		Button returnButton = (Button) findViewById(R.id.homeButton);
@@ -98,10 +108,7 @@ public class TestActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// This MUST MUST be done for authorization to work. If your get a
-		// MSTWEET_STATUS_AUTHORIZING
-		// message and nothing else it is most likely because this is not being
-		// done.
+		// This MUST MUST be done for authorization to work.
 		mMSTwitter.onCallingActivityResult(requestCode, resultCode, data);
 	}
 
@@ -118,12 +125,7 @@ public class TestActivity extends Activity implements OnClickListener {
 
 		// use MSTwitter function to save image to file because startTweet()
 		// takes an image path
-		// this is done to avoid passing large image files between intents which
-		// is not android best practices
-		/*
-		 * String tweetImagePath = MSTwitter.putBitmapInDiskCache(this,
-		 * imageToTweet);
-		 */
+		
 
 		// start the tweet
 		mMSTwitter.startTweet(textToTweet, mImagePath);
