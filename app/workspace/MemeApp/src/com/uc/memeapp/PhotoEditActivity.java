@@ -17,6 +17,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -109,13 +110,16 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		topEditText.setMaxLines(topMaxLines);
 		topEditText.setTextSize(25);
 		topEditText.setBackgroundColor(Color.LTGRAY);
-		topEditText.setMaxWidth(displayImage.getWidth());
-
+		topEditText.setMaxWidth(displayImage.getWidth());		
+		Typeface meme = Typeface.createFromAsset(getAssets(), "impact.ttf");
+		topEditText.setTypeface(meme);
+		
 		bottomEditText.setMaxLines(bottomMaxLines);
 		bottomEditText.setHorizontallyScrolling(false);
 		bottomEditText.setTextSize(25);
 		bottomEditText.setBackgroundColor(Color.LTGRAY);
 		bottomEditText.setMaxWidth(displayImage.getWidth());
+		bottomEditText.setTypeface(meme);
 
 		topEditText.addTextChangedListener(new TextWatcher() {
 

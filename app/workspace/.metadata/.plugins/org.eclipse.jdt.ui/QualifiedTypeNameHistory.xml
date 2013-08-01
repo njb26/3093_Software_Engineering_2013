@@ -3,5 +3,7 @@
 <fullyQualifiedTypeName name="android.graphics.Color"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.os.Handler"/>
+<fullyQualifiedTypeName name="com.uc.memeapp.R"/>
 <fullyQualifiedTypeName name="com.uc.memeapp.R.id"/>
+<fullyQualifiedTypeName name="com.uc.memeapp.R.drawable"/>
 </qualifiedTypeNameHistroy>

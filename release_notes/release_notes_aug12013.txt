@@ -1,0 +1,7 @@
+Release notes:
+
+TEST DOC UPDATED
+
+application:
+-Posting to Twitter functional
+-Ability to save edited photographs functional
