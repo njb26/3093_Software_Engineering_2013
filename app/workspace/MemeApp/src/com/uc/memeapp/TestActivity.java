@@ -41,10 +41,6 @@ public class TestActivity extends Activity implements OnClickListener {
 	/** module level variables used in different parts of this module */
 	private static final String TAG = "TestActivity:: ";
 	private MSTwitter mMSTwitter;
-	private CheckBox mTwitterBtn;
-	private String username = "";
-	private boolean postToTwitter = false;
-	private Bitmap imageToTweet;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +60,6 @@ public class TestActivity extends Activity implements OnClickListener {
 		Bitmap caller = BitmapFactory.decodeByteArray(byteArray, 0,
 				byteArray.length);
 		displayImage.setImageBitmap(caller);
-		imageToTweet = caller;
 
 		// setup button to call local tweet() function
 		ImageButton tweetButton = (ImageButton) findViewById(R.id.post_Button);
