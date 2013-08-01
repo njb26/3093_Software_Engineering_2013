@@ -31,7 +31,7 @@
             <EditText
                 android:id="@+id/topInputText"
                 android:layout_height="wrap_content"
-                
+                android:layout_width="fill_parent"
                 android:inputType="textCapCharacters|textNoSuggestions"
                 android:scrollHorizontally="false"
                 android:singleLine="false"
@@ -41,7 +41,7 @@
 
             <EditText
                 android:id="@+id/bottomInputText"
-                
+                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:inputType="textCapCharacters|textNoSuggestions"

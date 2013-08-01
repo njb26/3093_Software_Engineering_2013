@@ -111,15 +111,15 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		topEditText.setTextSize(25);
 		topEditText.setBackgroundColor(Color.LTGRAY);
 		topEditText.setMaxWidth(displayImage.getWidth());		
-		Typeface meme = Typeface.createFromAsset(getAssets(), "impact.ttf");
-		topEditText.setTypeface(meme);
+	//	Typeface meme = Typeface.createFromAsset(getAssets(), "impact.ttf");
+		//topEditText.setTypeface(meme);
 		
 		bottomEditText.setMaxLines(bottomMaxLines);
 		bottomEditText.setHorizontallyScrolling(false);
 		bottomEditText.setTextSize(25);
 		bottomEditText.setBackgroundColor(Color.LTGRAY);
 		bottomEditText.setMaxWidth(displayImage.getWidth());
-		bottomEditText.setTypeface(meme);
+		//bottomEditText.setTypeface(meme);
 
 		topEditText.addTextChangedListener(new TextWatcher() {
 
@@ -243,8 +243,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
 		imageToSave.compress(Bitmap.CompressFormat.PNG, 100, stream);
 		byte[] byteArray = stream.toByteArray();
-		// ImageView displayImage = (ImageView)
-		// findViewById(R.id.image_to_edit);
+		
 
 		// enables cursor visibility for user
 		topEditText.setCursorVisible(true);
