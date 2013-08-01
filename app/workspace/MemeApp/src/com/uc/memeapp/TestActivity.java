@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -21,7 +22,7 @@ import com.mindspiker.mstwitter.MSTwitter;
 import com.mindspiker.mstwitter.MSTwitter.MSTwitterResultReceiver;
 
 
-public class TestActivity extends Activity  {
+public class TestActivity extends Activity implements OnClickListener  {
 	
 	/** Consumer Key generated when you registered your app at https://dev.twitter.com/apps/ */
 	public static final String CONSUMER_KEY = "gXOzF2ixLR9lfOsj0u0W7Q";
@@ -40,7 +41,7 @@ public class TestActivity extends Activity  {
 	protected void onCreate(Bundle savedInstanceState) {
 		 super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_test);
-			
+			this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 			ImageView displayImage = (ImageView) findViewById(R.id.test);
 			byte[] byteArray = getIntent().getByteArrayExtra("testtest");
 			Bitmap caller = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
@@ -55,6 +56,10 @@ public class TestActivity extends Activity  {
 	            tweet();
 	        }
 	    });
+	    
+	    //button to go to MainActivity
+	    Button returnButton = (Button) findViewById(R.id.homeButton);
+	    returnButton.setOnClickListener(this);
 
 	    // make a MSTwitter event handler to receive tweet send events
 	    MSTwitterResultReceiver myMSTReceiver = new MSTwitterResultReceiver() {
@@ -121,7 +126,11 @@ public class TestActivity extends Activity  {
 	    resultsTV.setText(resultsTV.getText() + "\n[Message received at " + timeS +"]\n" + note);
 	}
 	
-	
+	@Override
+	public void onClick(View v) {
+		Intent intent = new Intent(this, MainActivity.class);
+		startActivity(intent);
+	}
 	 	
 	  
 	@Override

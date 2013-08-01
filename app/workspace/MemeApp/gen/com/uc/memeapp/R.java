@@ -83,7 +83,7 @@ public final class R {
     }
     public static final class id {
         public static final int accept_image=0x7f090003;
-        public static final int action_settings=0x7f090019;
+        public static final int action_settings=0x7f09001a;
         public static final int bottomInputText=0x7f09000a;
         public static final int button_capture=0x7f090001;
         public static final int camera_preview=0x7f090000;
@@ -91,6 +91,7 @@ public final class R {
         public static final int editText1=0x7f090016;
         public static final int get_new_image=0x7f090004;
         public static final int gridview=0x7f090011;
+        public static final int homeButton=0x7f090019;
         public static final int image_to_edit=0x7f090008;
         public static final int imgButton_delete=0x7f09000e;
         public static final int imgButton_gallery=0x7f09000f;

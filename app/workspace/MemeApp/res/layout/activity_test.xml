@@ -19,7 +19,7 @@
     <ImageButton
         android:id="@+id/post_Button"
         android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_height="80dp"       	
         android:layout_below="@id/test"
         android:background="@drawable/twitter_icon" />
 
@@ -28,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/post_Button"
+        android:layout_marginTop="35dp"
         android:text="Post To Twitter" />
 
     <TextView
@@ -42,7 +43,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textview"
-        android:layout_weight="1"
         android:ems="10"
         android:text="Test tweet text" >
     </EditText>
@@ -60,5 +60,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textview2"
         android:text="" />
+    
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_below="@id/resultsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Return to Home Page"
+        />
 
 </RelativeLayout>
