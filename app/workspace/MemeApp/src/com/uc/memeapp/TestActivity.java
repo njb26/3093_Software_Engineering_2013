@@ -30,7 +30,7 @@ public class TestActivity extends Activity implements OnClickListener  {
 	public static final String CONSUMER_SECRET = "nNbLXptxNbRtODd48GMyVP19VnmmqKTBe1uNIvxxwU"; 
 	/** module level variables used in different parts of this module */
 	private MSTwitter mMSTwitter;
-	private TwitterApp mTwitter;
+	//private TwitterApp mTwitter;
     private CheckBox mTwitterBtn;
     private String username = "";
     private boolean postToTwitter = false;
