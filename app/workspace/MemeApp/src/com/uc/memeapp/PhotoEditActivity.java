@@ -43,6 +43,8 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 	private static final String TAG = "PhotoEditActivity";
 	protected static final int MEDIA_TYPE_IMAGE = 1;
 	public static String imagePath = "";
+	private final int FONT_SIZE = 50;
+	private final int FONT_SIZE_UPDATE =150;
 
 	/**
 	 * -Sets the layout to be the one defined in the activity_photo_edit.xml
@@ -104,22 +106,26 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		// Create the two editText objects
 		topEditText = (EditText) findViewById(R.id.topInputText);
 		bottomEditText = (EditText) findViewById(R.id.bottomInputText);
+		
+		//Create the font
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/impact.ttf");
+		topEditText.setTypeface(tf);
+		bottomEditText.setTypeface(tf);
 
 		// cant scroll right, number of lines, and font size set
 		topEditText.setHorizontallyScrolling(false);
 		topEditText.setMaxLines(topMaxLines);
-		topEditText.setTextSize(25);
-		topEditText.setBackgroundColor(Color.LTGRAY);
+		topEditText.setTextSize(FONT_SIZE);
+		topEditText.setBackgroundColor(Color.argb(65, 139, 137, 137));	
 		topEditText.setMaxWidth(displayImage.getWidth());		
-	//	Typeface meme = Typeface.createFromAsset(getAssets(), "impact.ttf");
-		//topEditText.setTypeface(meme);
+	
 		
 		bottomEditText.setMaxLines(bottomMaxLines);
 		bottomEditText.setHorizontallyScrolling(false);
-		bottomEditText.setTextSize(25);
-		bottomEditText.setBackgroundColor(Color.LTGRAY);
+		bottomEditText.setTextSize(FONT_SIZE);
+		bottomEditText.setBackgroundColor(Color.argb(65, 139, 137, 137));	
 		bottomEditText.setMaxWidth(displayImage.getWidth());
-		//bottomEditText.setTypeface(meme);
+		
 
 		topEditText.addTextChangedListener(new TextWatcher() {
 
@@ -144,7 +150,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 				if (currLineCount > topMaxLines) {
 					topMaxLines++;
 					topEditText.setMaxLines(topMaxLines);
-					topEditText.setTextSize((float) 75 / topMaxLines);
+					topEditText.setTextSize((float) FONT_SIZE_UPDATE / topMaxLines);
 				}
 
 			}
@@ -170,7 +176,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 				if (currLineCount > bottomMaxLines) {
 					bottomMaxLines++;
 					bottomEditText.setMaxLines(bottomMaxLines);
-					bottomEditText.setTextSize((float) 75 / bottomMaxLines);
+					bottomEditText.setTextSize((float) FONT_SIZE_UPDATE / bottomMaxLines);
 				}
 
 			}
