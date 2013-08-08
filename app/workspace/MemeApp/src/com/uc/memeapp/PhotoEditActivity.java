@@ -213,6 +213,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		case (R.id.imgButton_delete): {
 			topEditText.setText("");
 			bottomEditText.setText("");
+			break;
 		}
 		// get the image in a byte[]
 		case (R.id.imgButton_save): {
@@ -228,6 +229,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			mInDisplay.putExtra("testtest", bArray);
 			mInDisplay.putExtra("Path", savePicture(bArray));
 			startActivity(mInDisplay);
+			break;
 		}
 
 		}
