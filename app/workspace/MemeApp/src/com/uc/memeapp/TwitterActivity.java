@@ -66,11 +66,12 @@ public class TwitterActivity extends Activity implements OnClickListener {
 		Uri mUri = Uri.parse(mImagePath);
 		displayImage.setImageURI(mUri);
 		// setup button to call local tweet() function
-		ImageButton tweetButton = (ImageButton) findViewById(R.id.post_Button);
+		final ImageButton tweetButton = (ImageButton) findViewById(R.id.post_Button);
 		tweetButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				tweet();
+				tweetButton.setEnabled(false);
 			}
 		});
 		
@@ -134,26 +135,27 @@ public class TwitterActivity extends Activity implements OnClickListener {
 		Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
 	}
 	
+	private void toastLong(String text){
+		Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+	}
+	
 	@SuppressLint("SimpleDateFormat")
 	private void handleTweetMessage(int event, String message) {
 
 		//String note = "";
 		switch (event) {
 		case MSTwitter.MSTWEET_STATUS_AUTHORIZING:
-			//note = "Authorizing app with twitter.com";
 			toast("Authorizing");
 			break;
 		case MSTwitter.MSTWEET_STATUS_STARTING:
-			//note = "Tweet data send started";
 			toast("Starting tweet!");
 			break;
 		case MSTwitter.MSTWEET_STATUS_FINSIHED_SUCCCESS:
-			//note = "Tweet sent successfully";
-			toast("Tweet sent successfully!");
+			toastLong("Tweet sent successfully!");
+			findViewById(R.id.post_Button).setEnabled(true);
 			break;
 		case MSTwitter.MSTWEET_STATUS_FINSIHED_FAILED:
-			//note = "Tweet failed:" + message;
-			toast("Tweet failed to send :(");
+			toastLong("Tweet failed to send :(");
 			break;
 		}
 /*

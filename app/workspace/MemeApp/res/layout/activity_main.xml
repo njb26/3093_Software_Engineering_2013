@@ -27,7 +27,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/cam_button_selector"
                 android:contentDescription="@string/camera_button_description"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitXY" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:background="@drawable/select_photo_button_selector"
                 android:contentDescription="@string/selection_button_description"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitXY" />
 
             <TextView
                 android:layout_width="wrap_content"

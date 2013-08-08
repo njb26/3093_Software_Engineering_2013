@@ -65,7 +65,7 @@
 
     <LinearLayout
         android:id="@+id/save_upload_buttons"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
         android:orientation="horizontal"
@@ -75,18 +75,22 @@
 
         <ImageButton
             android:id="@+id/imgButton_save"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="70dp"
+            android:paddingRight="5dp"
             android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:background="@drawable/save_button_selector"
             android:contentDescription="@string/save_button_description"
             android:scaleType="fitCenter" />
 
         <ImageButton
             android:id="@+id/imgButton_post"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="70dp"
+            android:padding="5dp"
             android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:background="@drawable/upload_button_selector"
             android:contentDescription="@string/upload_button_description"
             android:scaleType="fitCenter" />
@@ -96,6 +100,7 @@
         android:id="@+id/imgButton_delete"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
+        android:gravity="center_horizontal"
         android:background="@drawable/delete_button_selector"
         android:contentDescription="@string/delete_button_description"
         android:scaleType="fitCenter" />
