@@ -3,6 +3,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     
     <item android:drawable="@drawable/upload_button_clicked" android:state_pressed="true" />
-    <item android:drawable="@drawable/upload_button" android:state_pressed="false"/>
+    <item android:drawable="@drawable/photo_edit_buttons_raw" android:state_pressed="false"/>
 
 </selector>

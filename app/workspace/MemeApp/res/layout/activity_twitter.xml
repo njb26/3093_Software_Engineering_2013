@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textview"
         android:ems="10"
-        android:text="Enter Tweet Here!">
+        android:hint="Enter Tweet Here!">
     </EditText>
 
     
