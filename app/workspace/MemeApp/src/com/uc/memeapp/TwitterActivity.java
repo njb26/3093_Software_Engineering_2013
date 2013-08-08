@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
@@ -21,6 +22,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mindspiker.mstwitter.MSTwitter;
 import com.mindspiker.mstwitter.MSTwitter.MSTwitterResultReceiver;
@@ -56,12 +58,13 @@ public class TwitterActivity extends Activity implements OnClickListener {
 			Log.e(TAG, e.toString());
 		}
 		ImageView displayImage = (ImageView) findViewById(R.id.test);
-		byte[] byteArray = getIntent().getByteArrayExtra("testtest");
+		//byte[] byteArray = getIntent().getByteArrayExtra("testtest");
 		mImagePath = getIntent().getStringExtra("Path");
-		Bitmap caller = BitmapFactory.decodeByteArray(byteArray, 0,
+		/*Bitmap caller = BitmapFactory.decodeByteArray(byteArray, 0,
 				byteArray.length);
-		displayImage.setImageBitmap(caller);
-
+		displayImage.setImageBitmap(caller);*/
+		Uri mUri = Uri.parse(mImagePath);
+		displayImage.setImageURI(mUri);
 		// setup button to call local tweet() function
 		ImageButton tweetButton = (ImageButton) findViewById(R.id.post_Button);
 		tweetButton.setOnClickListener(new OnClickListener() {
@@ -127,31 +130,40 @@ public class TwitterActivity extends Activity implements OnClickListener {
 		mMSTwitter.startTweet(textToTweet, mImagePath);
 	}
 
+	private void toast(String text){
+		Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+	}
+	
 	@SuppressLint("SimpleDateFormat")
 	private void handleTweetMessage(int event, String message) {
 
-		String note = "";
+		//String note = "";
 		switch (event) {
 		case MSTwitter.MSTWEET_STATUS_AUTHORIZING:
-			note = "Authorizing app with twitter.com";
+			//note = "Authorizing app with twitter.com";
+			toast("Authorizing");
 			break;
 		case MSTwitter.MSTWEET_STATUS_STARTING:
-			note = "Tweet data send started";
+			//note = "Tweet data send started";
+			toast("Starting tweet!");
 			break;
 		case MSTwitter.MSTWEET_STATUS_FINSIHED_SUCCCESS:
-			note = "Tweet sent successfully";
+			//note = "Tweet sent successfully";
+			toast("Tweet sent successfully!");
 			break;
 		case MSTwitter.MSTWEET_STATUS_FINSIHED_FAILED:
-			note = "Tweet failed:" + message;
+			//note = "Tweet failed:" + message;
+			toast("Tweet failed to send :(");
 			break;
 		}
-
+/*
 		// add note to results TextView
 		SimpleDateFormat timeFmt = new SimpleDateFormat("h:mm:ss.S");
 		String timeS = timeFmt.format(new Date());
 		TextView resultsTV = (TextView) findViewById(R.id.resultsTextView);
 		resultsTV.setText(resultsTV.getText() + "\n[Message received at "
 				+ timeS + "]\n" + note);
+				*/
 	}
 
 	@Override

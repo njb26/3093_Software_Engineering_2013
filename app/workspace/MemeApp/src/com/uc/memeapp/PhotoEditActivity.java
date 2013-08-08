@@ -207,6 +207,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			Log.d(TAG, "Error accessing file: " + e.getMessage());
 		}
 		Toast.makeText(this, "Image saved!", Toast.LENGTH_SHORT).show();
+		
 		return pictureFile.getAbsolutePath();
 	}
 
@@ -230,7 +231,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 			byte[] bArray = capturePic();
 			Intent mInDisplay = new Intent(PhotoEditActivity.this,
 					TwitterActivity.class);
-			mInDisplay.putExtra("testtest", bArray);
+			//mInDisplay.putExtra("testtest", bArray);
 			mInDisplay.putExtra("Path", savePicture(bArray));
 			startActivity(mInDisplay);
 			break;
