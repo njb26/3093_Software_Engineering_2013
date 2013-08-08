@@ -28,12 +28,12 @@ public class CameraActivity extends Activity implements OnClickListener {
 	private static final String TAG = "CameraActivity";
 	protected static final int MEDIA_TYPE_IMAGE = 1;
 	private ImageButton captureButton;
-	public static String imagePath= "";
-	
+	public static String imagePath = "";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-    	this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_camera);
 
 		/** Capture button */
@@ -70,7 +70,6 @@ public class CameraActivity extends Activity implements OnClickListener {
 		return camera; // Returns null if camera fails to open Be sure to null
 						// check!
 	}
-
 
 	/** Create a File for saving a new picture */
 	private static File getOutputMediaFile(int type) {
@@ -123,27 +122,37 @@ public class CameraActivity extends Activity implements OnClickListener {
 				FileOutputStream fos = new FileOutputStream(pictureFile);
 				fos.write(data);
 				fos.close();
-				
+
 			} catch (FileNotFoundException e) {
 				Log.d(TAG, "File not found: " + e.getMessage());
 			} catch (IOException e) {
 				Log.d(TAG, "Error accessing file: " + e.getMessage());
-			}	
+			}
 		}
 	};
 
+	/**
+	 * handler method for back button use
+	 */
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
 		releaseCamera();
 	}
 
+	/**
+	 * release camera on system pause
+	 */
 	@Override
 	protected void onPause() {
 		super.onPause();
 		releaseCamera(); // release the camera immediately on pause event
 	}
 
+	/**
+	 * releases the camera when called. This is a must to avoid crashing the
+	 * application.
+	 */
 	public void releaseCamera() {
 		if (mCamera != null) {
 			mCamera.release(); // release the camera for other applications
@@ -151,14 +160,21 @@ public class CameraActivity extends Activity implements OnClickListener {
 		}
 	}
 
+	/**
+	 * resets the camera after pause
+	 */
 	public void resetCam() {
 		mPreview = new CameraPreview(this, mCamera);
 		FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
 		preview.addView(mPreview);
 	}
+	/**
+	 * runs the gallery scanner to find new files for a specific file.
+	 * @param file
+	 */
 
 	public void galleryAddPic(File file) {
-		
+
 		Uri contentUri = Uri.fromFile(file);
 		Intent mediaScanIntent = new Intent(
 				Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, contentUri);
@@ -166,21 +182,25 @@ public class CameraActivity extends Activity implements OnClickListener {
 		launchPhotoEdit(contentUri);
 	}
 
-	public void launchPhotoEdit(Uri content){
-		Intent mInDisplay=new Intent(CameraActivity.this, PhotoEditActivity.class);
+	/**
+	 * Launches photo edit activity on taking of photo
+	 * @param content
+	 */
+	public void launchPhotoEdit(Uri content) {
+		Intent mInDisplay = new Intent(CameraActivity.this,
+				PhotoEditActivity.class);
 		mInDisplay.putExtra("caller", "camera");
 		mInDisplay.putExtra("path", content.toString());
-        startActivity(mInDisplay);
+		startActivity(mInDisplay);
 	}
-	
+
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case (R.id.button_capture):
 			mCamera.takePicture(null, null, mPicture);
-			}
+		}
 
 	}
-	
 
 }

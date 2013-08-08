@@ -97,11 +97,12 @@ public class TwitterActivity extends Activity implements OnClickListener {
 				handleTweetMessage(tweetLifeCycleEvent, tweetMessage);
 			}
 		};
-
+/**
 		// create module level MSTwitter object.
 		// This object can be destroyed and recreated without interrupting the
 		// send tweet process.
 		// So no need to save and pass back in savedInstanceState bundle.
+		*/
 		mMSTwitter = new MSTwitter(this, CONSUMER_KEY, CONSUMER_SECRET,
 				myMSTReceiver);
 	}
@@ -130,15 +131,27 @@ public class TwitterActivity extends Activity implements OnClickListener {
 		// start the tweet
 		mMSTwitter.startTweet(textToTweet, mImagePath);
 	}
-
+/**
+ * toast: takes in a string and creates a toast.
+ * @param text
+ */
 	private void toast(String text){
 		Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
 	}
-	
+	/**
+	 * toastLong: takes in a string and creates a long show toast message.
+	 * @param text
+	 */
 	private void toastLong(String text){
 		Toast.makeText(this, text, Toast.LENGTH_LONG).show();
 	}
 	
+	/**
+	 * handleTweetMessage
+	 * @return void
+	 * @param event
+	 * @param message
+	 */
 	@SuppressLint("SimpleDateFormat")
 	private void handleTweetMessage(int event, String message) {
 
@@ -158,14 +171,6 @@ public class TwitterActivity extends Activity implements OnClickListener {
 			toastLong("Tweet failed to send :(");
 			break;
 		}
-/*
-		// add note to results TextView
-		SimpleDateFormat timeFmt = new SimpleDateFormat("h:mm:ss.S");
-		String timeS = timeFmt.format(new Date());
-		TextView resultsTV = (TextView) findViewById(R.id.resultsTextView);
-		resultsTV.setText(resultsTV.getText() + "\n[Message received at "
-				+ timeS + "]\n" + note);
-				*/
 	}
 
 	@Override
