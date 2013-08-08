@@ -37,6 +37,12 @@ public class StockActivity extends Activity {
 	            }
 	        });
 	    }
-	
+	 
+	 /**
+	  * Gracefully handle back button actions
+	  */
+		public void onBackPressed(){
+			super.onBackPressed();
+		}
 
 }

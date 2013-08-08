@@ -81,7 +81,12 @@ public class GalleryActivity extends Activity implements OnClickListener {
             	 throw new IllegalArgumentException("Activity did not return a picture");
              }
             }
-         
+    /**
+     * Gracefully handle back button actions
+     */
+ 	public void onBackPressed(){
+		super.onBackPressed();
+	}
      
     /** 
      * for the two buttons, accept, and take another photo

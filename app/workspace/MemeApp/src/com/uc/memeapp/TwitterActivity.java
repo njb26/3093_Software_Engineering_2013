@@ -26,7 +26,7 @@ import com.mindspiker.mstwitter.MSTwitter;
 import com.mindspiker.mstwitter.MSTwitter.MSTwitterResultReceiver;
 
 
-public class TestActivity extends Activity implements OnClickListener {
+public class TwitterActivity extends Activity implements OnClickListener {
 	private String mImagePath = "";
 	/**
 	 * Consumer Key generated when registered app at
@@ -40,14 +40,14 @@ public class TestActivity extends Activity implements OnClickListener {
 	public static final String CONSUMER_SECRET = "nNbLXptxNbRtODd48GMyVP19VnmmqKTBe1uNIvxxwU";
 	
 	/** module level variables used in different parts of this module */
-	private static final String TAG = "TestActivity:: ";
+	private static final String TAG = "TwitterActivity:: ";
 	private MSTwitter mMSTwitter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_test);
+		setContentView(R.layout.activity_twitter);
 		try {
 			System.loadLibrary("MSTwitter");
 			System.loadLibrary("twitter4j-core-3.0.3-javadoc");
@@ -159,7 +159,14 @@ public class TestActivity extends Activity implements OnClickListener {
 		Intent intent = new Intent(this, MainActivity.class);
 		startActivity(intent);
 	}
-
+	
+	/**
+	 * Gracefully handle back button actions
+	 */
+	public void onBackPressed(){
+		super.onBackPressed();
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

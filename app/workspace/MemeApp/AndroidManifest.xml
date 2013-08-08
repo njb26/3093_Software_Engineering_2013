@@ -66,7 +66,7 @@
             android:label="@string/title_activity_stock" >
         </activity>
         <activity
-            android:name="com.uc.memeapp.TestActivity"
+            android:name="com.uc.memeapp.TwitterActivity"
             android:label="@string/title_activity_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

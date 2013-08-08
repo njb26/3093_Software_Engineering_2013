@@ -49,6 +49,13 @@ public class SelectionActivity extends Activity implements OnClickListener {
 	}
 
 	/**
+	 * Gracefully handle back button actions
+	 */
+	public void onBackPressed(){
+		super.onBackPressed();
+	}
+		
+	/**
 	 * Called when either of the buttons are pressed, launches the correct
 	 * activity
 	 * 

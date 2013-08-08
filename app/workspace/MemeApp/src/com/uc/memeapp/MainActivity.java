@@ -39,6 +39,13 @@ public class MainActivity extends Activity implements OnClickListener {
         return true;
     }
     
+    /**
+     * Gracefully handle back button actions
+     */
+	public void onBackPressed(){
+		super.onBackPressed();
+	}
+	
 	private boolean checkCameraHardware(Context context) {
 		if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY)){
 			return true;

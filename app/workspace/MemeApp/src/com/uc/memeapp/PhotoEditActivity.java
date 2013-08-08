@@ -184,6 +184,10 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 
 	}
 
+	public void onBackPressed(){
+		super.onBackPressed();
+	}
+	
 	public String savePicture(byte[] bArray) {
 		File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
 		if (pictureFile == null) {
@@ -225,7 +229,7 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		case (R.id.imgButton_post): {
 			byte[] bArray = capturePic();
 			Intent mInDisplay = new Intent(PhotoEditActivity.this,
-					TestActivity.class);
+					TwitterActivity.class);
 			mInDisplay.putExtra("testtest", bArray);
 			mInDisplay.putExtra("Path", savePicture(bArray));
 			startActivity(mInDisplay);
