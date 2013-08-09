@@ -58,11 +58,9 @@ public class TwitterActivity extends Activity implements OnClickListener {
 			Log.e(TAG, e.toString());
 		}
 		ImageView displayImage = (ImageView) findViewById(R.id.test);
-		//byte[] byteArray = getIntent().getByteArrayExtra("testtest");
+		;
 		mImagePath = getIntent().getStringExtra("Path");
-		/*Bitmap caller = BitmapFactory.decodeByteArray(byteArray, 0,
-				byteArray.length);
-		displayImage.setImageBitmap(caller);*/
+		
 		Uri mUri = Uri.parse(mImagePath);
 		displayImage.setImageURI(mUri);
 		// setup button to call local tweet() function

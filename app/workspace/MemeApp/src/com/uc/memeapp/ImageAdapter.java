@@ -34,6 +34,13 @@ public class ImageAdapter extends BaseAdapter {
 	}
 
 	// create a new ImageView for each item referenced by the Adapter
+	/**
+	 * Creates imageview for each image we have, to be referenced and placed in the image
+	 * @param position: position in array
+	 * @param convertView: view to be converted in to arrayView
+	 * @param parent: viewgroup of all views
+	 * @return view: imageView to be referenced by adapter
+	 */
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ImageView imageView;
 		if (convertView == null) { // if it's not recycled, initialize some
@@ -65,6 +72,9 @@ public class ImageAdapter extends BaseAdapter {
 			R.drawable.pedobear, R.drawable.philosoraptor,
 			R.drawable.scumbag_steve, R.drawable.skeptical_fry,
 			R.drawable.socially_awesome_penguin,
+			
+			//More images below, not referenced to save memory
+			
 			//R.drawable.socially_awkward_penguin, R.drawable.success_kid,
 			//R.drawable.successful_black_man, R.drawable.ten_guy,
 			//R.drawable.why_not_zoidberg, R.drawable.y_u_no, R.drawable.yo_dawg

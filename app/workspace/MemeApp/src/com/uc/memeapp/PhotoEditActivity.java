@@ -187,7 +187,11 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 	public void onBackPressed(){
 		super.onBackPressed();
 	}
-	
+	/**
+	 * saves the picture to the device's gallery
+	 * @param bArray bytearray of the picture ro be saved
+	 * @return string filepath to the image
+	 */
 	public String savePicture(byte[] bArray) {
 		File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
 		if (pictureFile == null) {
@@ -211,6 +215,12 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		return pictureFile.getAbsolutePath();
 	}
 
+	/**
+	 * what to do for each button
+	 * delete: wipe text off the image
+	 * save: save edited image to phone
+	 * post: save image and send to twitteractivity to be posted
+	 */
 	public void onClick(View v) {
 
 		switch (v.getId()) {
@@ -240,6 +250,11 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		}
 	}
 
+	/**
+	 * Turns framelayout- the edited picture into a byte[]
+	 * "captures" a photo of the edited image
+	 * @return byte[] of the image
+	 */
 	public byte[] capturePic() {
 		// disables visibility of cursor before it saves
 		topEditText.setCursorVisible(false);
@@ -269,6 +284,10 @@ public class PhotoEditActivity extends Activity implements OnClickListener {
 		return byteArray;
 	}
 
+	/**
+	 * helper method to add a pic to the gallery
+	 * @param file to be added
+	 */
 	public void galleryAddPic(File file) {
 
 		Uri contentUri = Uri.fromFile(file);

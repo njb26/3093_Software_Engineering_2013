@@ -23,6 +23,10 @@ import android.widget.ImageView;
  *
  */
 
+/**
+ * @author Niklas
+ *
+ */
 public class GalleryActivity extends Activity implements OnClickListener {
 
     Button acceptButton;
