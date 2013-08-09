@@ -32,6 +32,10 @@ public class MemeAppTestCamera extends
 		}
 	}
 	
+	public void testGetCameraInstance(){
+		Camera mCamera = mActivity.getCameraInstance();
+		
+	}
 	
 	public void testCameraReleased(){
 		

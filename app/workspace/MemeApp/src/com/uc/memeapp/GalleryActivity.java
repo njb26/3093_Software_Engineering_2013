@@ -106,7 +106,7 @@ public class GalleryActivity extends Activity implements OnClickListener {
 				break;
 			/* If the user did not like the selected image, then it will relaunch the selection*/
 			case(R.id.get_new_image):
-				this.onCreate(instance);
+				onBackPressed();
 				break;
 		
 		}

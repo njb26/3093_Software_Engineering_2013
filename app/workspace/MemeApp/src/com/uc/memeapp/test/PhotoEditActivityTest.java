@@ -22,7 +22,7 @@ public class PhotoEditActivityTest extends ActivityInstrumentationTestCase2<Phot
 		mActivity = getActivity();
 	}
 	
-	
+	/*
 	public void testLineWrapping(){
 		EditText testEditTop = mActivity.topEditText;
 		EditText testEditBottom = mActivity.bottomEditText;
@@ -54,5 +54,5 @@ public class PhotoEditActivityTest extends ActivityInstrumentationTestCase2<Phot
 		assertTrue(testEditTop.getTextSize() < 25);
 		assertTrue(testEditBottom.getTextSize() < 25);
 	}
-
+*/
 }
